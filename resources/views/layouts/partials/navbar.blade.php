@@ -5,11 +5,12 @@
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
       </a>
 
+      @auth
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <!-- <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Project</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Report</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">User Management</a></li>
+        <!-- <li><a href="#" class="nav-link px-2 text-white">User Management</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Leave</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Payslips</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Profile</a></li> -->
@@ -19,15 +20,14 @@
         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
       </form> --}}
 
-      @auth
-        {{auth()->user()->name}}
+
         <div class="text-end">
-          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Project</a>
+          <!-- <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Project</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Report</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">User Management</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Leave</a>
-          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a>
-          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Profile</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a> -->
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
         </div>
       @endauth
 
