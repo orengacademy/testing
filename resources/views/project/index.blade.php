@@ -1,12 +1,12 @@
 @extends('layouts.app-master')
 
 @section('content')
-    <div class="container">
+    <div class="bg-light p-5 rounded">
         <div class="row" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Project Management</h2>
+                        <h3>Project Management</h3>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/project/create') }}" class="w-10 btn btn-lg btn-primary" title="Add New Student">
