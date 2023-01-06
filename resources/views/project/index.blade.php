@@ -9,7 +9,7 @@
                         <h2>Project Management</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/project/create') }}" class="btn btn-success btn-sm" title="Add New Student">
+                        <a href="{{ url('/project/create') }}" class="w-10 btn btn-lg btn-primary" title="Add New Student">
                             Add New
                         </a>
                         <br/>
