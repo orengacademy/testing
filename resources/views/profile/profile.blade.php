@@ -13,8 +13,9 @@
             <h1 class="h3 mb-3 fw-normal">Profile Pages</h1>
     
             @include('layouts.partials.messages')
-    
-            <div class="form-group form-floating mb-3">
+            
+            <div class = "form-group form-floating row g-3" >
+            <div class="col-md-6">
                 <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
                 <label for="floatingName">Email or Username</label>
                 @if ($errors->has('username'))
@@ -22,13 +23,14 @@
                 @endif
             </div>
     
-            <div class="form-group form-floating mb-3">
+            <div class="col-md-6">
                 <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Password</label>
                 @if ($errors->has('password'))
                     <span class="text-danger text-left">{{ $errors->first('password') }}</span>
                 @endif
             </div>
+        </div>
     
             <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
     
