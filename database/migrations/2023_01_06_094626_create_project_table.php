@@ -15,10 +15,13 @@ return new class extends Migration
     {
             Schema::create('projects', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->timestamps();
+                $table->string('titleproject');
                 $table->string('client');
                 $table->string('PMO');
                 $table->string('Engineers');
+                $table->date('startdate');
+                $table->date('enddate');
+                $table->timestamps();
                 // $table->decimal('value', 8, 2);
             });
         }
