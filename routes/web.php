@@ -46,5 +46,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/profile', 'ProfileController@show')->name('profile.show');
         Route::post('/profile', 'ProfileController@update')->name('profile.perform');
+
+        /**
+         * Project Routes
+         */
+        Route::resource("/project", ProjectController::class);
     });
 });
