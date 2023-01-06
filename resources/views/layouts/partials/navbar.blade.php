@@ -15,14 +15,19 @@
         <li><a href="#" class="nav-link px-2 text-white">Profile</a></li> -->
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+      {{-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-      </form>
+      </form> --}}
 
       @auth
         {{auth()->user()->name}}
         <div class="text-end">
-          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Project</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Report</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">User Management</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Leave</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a>
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Profile</a>
         </div>
       @endauth
 
