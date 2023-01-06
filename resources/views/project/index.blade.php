@@ -1,11 +1,12 @@
-@extends('project.layout')
+@extends('layouts.app-master')
+
 @section('content')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Laravel 9 CRUD (Create, Read, Update and Delete)</h2>
+                        <h2>Project Management</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/project/create') }}" class="btn btn-success btn-sm" title="Add New Student">
@@ -18,10 +19,16 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
-                                        <th>Mobile</th>
-                                        <th>Actions</th>
+                                        <th>Title</th>
+                                        <th>Project Code</th>
+                                        <th>Client</th>
+                                        <th>PMO</th>
+                                        <th>Engineer</th>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Scope</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
