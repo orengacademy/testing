@@ -21,6 +21,8 @@ return new class extends Migration
                 $table->string('Engineers');
                 $table->date('startdate');
                 $table->date('enddate');
+                $table->date('scope');
+                $table->date('type');
                 $table->timestamps();
                 // $table->decimal('value', 8, 2);
             });
