@@ -16,32 +16,32 @@
             
             
             <div class = "form-group row g-2" >
-            <div class="col-xs-3 form-floating">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="name" required="required" autofocus>
-                <label for="floatingName">Full Name</label>
-                @if ($errors->has('username'))
-                    <span class="text-danger text-left">{{ $errors->first('username') }}</span>
-                @endif
-            </div>
-    
-            <div class="col-md-6 form-floating">
-                <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
-                <label for="floatingPassword">Password</label>
-                @if ($errors->has('password'))
-                    <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-                @endif
-            </div>
-
-            <div class="col-md-6 form-floating">
-                <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
-                <label for="floatingPassword">Password</label>
-                @if ($errors->has('password'))
-                    <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-                @endif
-            </div>
+                <div class="col-xs-3 form-floating">
+                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="name" required="required" autofocus>
+                    <label for="floatingName">Full Name</label>
+                    @if ($errors->has('username'))
+                        <span class="text-danger text-left">{{ $errors->first('username') }}</span>
+                    @endif
+                </div>
         
-    
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                <div class="col-md-6 form-floating">
+                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+                    <label for="floatingPassword">Password</label>
+                    @if ($errors->has('password'))
+                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    @endif
+                </div>
+
+                <div class="col-md-6 form-floating">
+                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+                    <label for="floatingPassword">Password</label>
+                    @if ($errors->has('password'))
+                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    @endif
+                </div>
+            
+        
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
             </div>
             @include('auth.partials.copy')
         </form>
