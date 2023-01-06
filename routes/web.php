@@ -40,5 +40,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+
+        /**
+         * Profile Routes
+         */
+        Route::get('/profile', 'ProfileController@show')->name('profile.show');
+        Route::post('/profile', 'ProfileController@update')->name('profile.perform');
     });
 });

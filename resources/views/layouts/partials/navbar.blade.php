@@ -17,6 +17,7 @@
         <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Project</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Report</a></li>
+        <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
         <!-- <li><a href="#" class="nav-link px-2 text-white">User Management</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Leave</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Payslips</a></li>
