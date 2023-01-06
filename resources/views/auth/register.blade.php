@@ -40,6 +40,24 @@
             @endif
         </div>
 
+        <div class="form-group form-floating mb-3">
+            {{-- <input type="password" class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="Confirm Password" required="required"> --}}
+            <select class="form-control" name="role" required="required" id="role">
+                <option></option>
+                <option value="admin">Admin</option>
+                <option value="finance">Finance</option>
+                <option value="hr">HR</option>
+                <option value="engineer">Engineer</option>
+                <option value="pmo">PMO</option>
+                <option value="techwriter">TechnicalWriter</option>
+                <option value="sales">Sales</option>
+              </select>
+            <label for="role">Roles</label>
+            @if ($errors->has('role'))
+                <span class="text-danger text-left">{{ $errors->first('role') }}</span>
+            @endif
+        </div>
+
         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
 
         @include('auth.partials.copy')
