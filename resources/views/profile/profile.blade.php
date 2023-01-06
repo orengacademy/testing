@@ -1,14 +1,33 @@
 @extends('layouts.app-master')
 
 @section('content')
-    <div class="bg-light p-5 rounded">
-        @auth
-        <p>Hi, {{auth()->user()->name}}</p>
-        @endauth
+<form method="post" action="{{ route('login.perform') }}">
 
-        @guest
-        <h1>NETWORK SECURITY DEVELOPMENT CENTRE​</h1>
-        <p class="lead">A company that implements Information Security Management System (ISMS) and focuses on becoming Malaysia’s First Network Security Development Center. We provide diverse solution including Training & Workshop, Knowledge Sharing & Technology Updates, Network Assessment, Application Assessment, Security Assessment, Cyber Defense & Offense Simulation Range, Network Visibility & Monitoring Solutions and Training Facilities to a variety of customers from government and private sectors.</p>
-        @endguest
+    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+    <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
+
+    <h1 class="h3 mb-3 fw-normal">Login</h1>
+
+    @include('layouts.partials.messages')
+
+    <div class="form-group form-floating mb-3">
+        <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
+        <label for="floatingName">Email or Username</label>
+        @if ($errors->has('username'))
+            <span class="text-danger text-left">{{ $errors->first('username') }}</span>
+        @endif
     </div>
+
+    <div class="form-group form-floating mb-3">
+        <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+        <label for="floatingPassword">Password</label>
+        @if ($errors->has('password'))
+            <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+        @endif
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+
+    @include('auth.partials.copy')
+</form>
 @endsection
