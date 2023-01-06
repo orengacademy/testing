@@ -15,7 +15,7 @@
             @include('layouts.partials.messages')
             
             <div class = "form-group row g-3" >
-            <div class="col-md-6 form-floating">
+            <div class="col-lg-3 form-floating">
                 <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
                 <label for="floatingName">Email or Username</label>
                 @if ($errors->has('username'))
@@ -23,7 +23,7 @@
                 @endif
             </div>
     
-            <div class="col-md-6 form-floating">
+            <div class="col-xs-3 form-floating">
                 <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Password</label>
                 @if ($errors->has('password'))
@@ -31,7 +31,7 @@
                 @endif
             </div>
 
-            <div class="col-md-6 form-floating">
+            <div class="col-xs-3 form-floating">
                 <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Password</label>
                 @if ($errors->has('password'))
