@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="bg-light p-5 rounded">
+      @auth
         <div class="row" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
@@ -9,7 +10,7 @@
                         <h3>Project Management</h3>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/project/create') }}" class="w-10 btn btn-lg btn-primary" title="Add New Student">
+                        <a href="{{ url('/project/create') }}" class="w-10 btn btn-sm btn-primary" title="Add New Student">
                             Add New +
                         </a>
                         <br/>
@@ -66,5 +67,6 @@
                 </div>
             </div>
         </div>
+        @endauth
     </div>
 @endsection

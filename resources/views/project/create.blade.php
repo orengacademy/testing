@@ -19,7 +19,7 @@
 
             <div class = "form-group row g-3" >
             <div class="col-md-6 form-floating">
-                <input type="text" class="form-control" name="username" id="titleproject" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
+                <input type="text" class="form-control" name="titleproject" id="titleproject" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
                 <label for="floatingName">Project Title</label>
                 @if ($errors->has('username'))
                     <span class="text-danger text-left">{{ $errors->first('username') }}</span>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-md-6 form-floating">
-                <input type="text" class="form-control" name="password" id="client" value="{{ old('password') }}" placeholder="Password" required="required">
+                <input type="text" class="form-control" name="client" id="client" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Client/Agency</label>
                 @if ($errors->has('password'))
                     <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="col-md-6 form-floating">
-                <input type="text" class="form-control" name="password" id="projectcode" value="{{ old('password') }}" placeholder="Password" required="required">
+                <input type="text" class="form-control" name="projectcode" id="projectcode" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Project Code</label>
                 @if ($errors->has('password'))
                     <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="col-md-6 form-floating">
-                <input type="text" class="form-control" name="password" id="year" value="{{ old('password') }}" placeholder="Password" required="required">
+                <input type="text" class="form-control" name="year" id="year" value="{{ old('password') }}" placeholder="Password" required="required">
                 <label for="floatingPassword">Year</label>
                 @if ($errors->has('password'))
                     <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -54,7 +54,7 @@
             <div class="col-md-6 form-floating">
               <div class="form-group">
             <label for="sel1">Engineer</label>
-            <select class="form-control" id="Engineers">
+            <select class="form-control" name="Engineers" id="Engineers">
               <option>Farzul</option>
               <option>Saharuddin</option>
               <option>Daniel</option>
@@ -66,7 +66,7 @@
           <div class="col-md-6 form-floating">
             <div class="form-group">
           <label for="sel1">Project Manager (PMO)</label>
-          <select class="form-control" id="PMO">
+          <select class="form-control" name="PMO" id="PMO">
             <option>Intan Harnila</option>
             <option>Fyka</option>
             <option>Rafidah</option>
@@ -78,7 +78,7 @@
         <div class="col-md-6 form-floating">
           <div class="form-group">
         <label for="sel1">Scope</label>
-        <select class="form-control" id="scope">
+        <select class="form-control" name="scope" id="scope">
           <option>WASA</option>
           <option>EPT</option>
           <option>IPT</option>
@@ -90,7 +90,7 @@
       <div class="col-md-6 form-floating">
         <div class="form-group">
       <label for="sel1">Assessment Type</label>
-      <select class="form-control" id="type">
+      <select class="form-control" name="type" id="type">
         <option>Pre</option>
         <option>Post</option>
         <option>Hardening</option>
@@ -101,7 +101,7 @@
     <div class="col-md-6 form-floating">
       <div class="form-group">
     <label for="sel1">Status</label>
-    <select class="form-control" id="status">
+    <select class="form-control" name="status" id="status">
       <option>Completed</option>
       <option>In Review</option>
       <option>In Progress</option>
@@ -110,7 +110,7 @@
   </div>
 
   <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="password" id="startdate" value="{{ old('password') }}" placeholder="Password" required="required">
+      <input type="date" class="form-control" name="startdate" id="startdate" value="{{ old('password') }}" placeholder="Password" required="required">
       <label for="floatingPassword">Start Date</label>
       @if ($errors->has('password'))
           <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -118,7 +118,7 @@
   </div>
 
   <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="password" id="enddate" value="{{ old('password') }}" placeholder="Password" required="required">
+      <input type="date" class="form-control" name="enddate" id="enddate" value="{{ old('password') }}" placeholder="Password" required="required">
       <label for="floatingPassword">End Date</label>
       @if ($errors->has('password'))
           <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -165,6 +165,5 @@
     });
     });
     </script>
-
 
 @endsection
