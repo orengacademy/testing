@@ -16,29 +16,64 @@
             
             
             <div class = "form-group row g-2" >
+
+                {{-- name --}}
                 <div class="col-xs-3 form-floating">
                     <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="name" required="required" autofocus>
                     <label for="floatingName">Full Name</label>
-                    @if ($errors->has('username'))
-                        <span class="text-danger text-left">{{ $errors->first('username') }}</span>
+                    @if ($errors->has('name'))
+                        <span class="text-danger text-left">{{ $errors->first('name') }}</span>
                     @endif
                 </div>
         
+                {{-- email --}}
                 <div class="col-md-6 form-floating">
-                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
-                    <label for="floatingPassword">Password</label>
-                    @if ($errors->has('password'))
-                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="email" required="required" autofocus>
+                    <label for="floatingName">Email Address</label>
+                    @if ($errors->has('email'))
+                        <span class="text-danger text-left">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
 
+                {{-- gender --}}
                 <div class="col-md-6 form-floating">
-                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
-                    <label for="floatingPassword">Password</label>
-                    @if ($errors->has('password'))
-                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="gender" required="required" autofocus>
+                    <label for="floatingName">Gender</label>
+                    @if ($errors->has('gender'))
+                        <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
                     @endif
                 </div>
+
+                {{-- resident Status --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus" required="required" autofocus>
+                    <label for="floatingName">Resident status</label>
+                    @if ($errors->has('residentstatus'))
+                        <span class="text-danger text-left">{{ $errors->first('residentstatus') }}</span>
+                    @endif
+                </div>
+
+                {{-- type of resident --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="typeofresident" value="{{ old('typeofresident') }}" placeholder="typeofresident" required="required" autofocus>
+                    <label for="floatingName">Type Of Resident</label>
+                    @if ($errors->has('typeofresident'))
+                        <span class="text-danger text-left">{{ $errors->first('typeofresident') }}</span>
+                    @endif
+                </div>
+
+                {{-- nationality --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="nationality" value="{{ old('nationality') }}" placeholder="nationality" required="required" autofocus>
+                    <label for="floatingName">Nationality</label>
+                    @if ($errors->has('nationality'))
+                        <span class="text-danger text-left">{{ $errors->first('nationality') }}</span>
+                    @endif
+                </div>
+
+                
+
+                
             
         
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
