@@ -24,7 +24,7 @@
 
                 {{-- name --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="name" value="{{ auth()->user()->name }}" placeholder="name" required="required" autofocus>
+                    <input type="text" class="form-control" name="name" value="{{ auth()->user()->name }}" placeholder="name"  autofocus>
                     <label for="floatingName">Full Name</label>
                     @if ($errors->has('name'))
                         <span class="text-danger text-left">{{ $errors->first('name') }}</span>
@@ -33,7 +33,7 @@
         
                 {{-- email --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="email" value="{{ auth()->user()->email }}" placeholder="email" required="required" autofocus>
+                    <input type="text" class="form-control" name="email" value="{{ auth()->user()->email }}" placeholder="email"  autofocus>
                     <label for="floatingName">Email Address</label>
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>
@@ -58,7 +58,7 @@
                       </select>
 
 
-                    {{-- <input type="text" class="form-control" name="gender" value="{{ auth()->user()->gender }}" placeholder="gender" required="required" autofocus> --}}
+                    {{-- <input type="text" class="form-control" name="gender" value="{{ auth()->user()->gender }}" placeholder="gender"  autofocus> --}}
                     <label for="floatingName">Gender</label>
                     @if ($errors->has('gender'))
                         <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
@@ -99,7 +99,7 @@
                         @endif                       
                     >Non-Resident</option>
                     </select>                    
-                    {{-- <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus" required="required" autofocus> --}}
+                    {{-- <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus"  autofocus> --}}
                     <label for="floatingName">Resident status</label>
                     @if ($errors->has('residentstatus'))
                         <span class="text-danger text-left">{{ $errors->first('residentstatus') }}</span>
@@ -133,7 +133,7 @@
                             @endif                       
                         >Others</option>
                     </select>
-                    {{-- <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race" required="required" autofocus> --}}
+                    {{-- <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race"  autofocus> --}}
                     <label for="floatingName">Race</label>
                     @if ($errors->has('race'))
                         <span class="text-danger text-left">{{ $errors->first('race') }}</span>
@@ -142,7 +142,7 @@
 
                 {{-- type of resident --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="typeofresident" value="{{ old('typeofresident') }}" placeholder="typeofresident" required="required" autofocus>
+                    <input type="text" class="form-control" name="typeofresident" value="{{ old('typeofresident') }}" placeholder="typeofresident"  autofocus>
                     <label for="floatingName">Type Of Resident</label>
                     @if ($errors->has('typeofresident'))
                         <span class="text-danger text-left">{{ $errors->first('typeofresident') }}</span>
@@ -151,7 +151,20 @@
 
                 {{-- nationality --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="nationality" value="{{ old('nationality') }}" placeholder="nationality" required="required" autofocus>
+                    <select class="form-control" id="exampleFormControlSelect1" name="nationality">
+                        <option value="malaysia" 
+                            @if(auth()->user()->nationality=="malaysia")
+                                selected
+                            @endif                       
+                        >Malaysia</option>
+    
+                        <option value="nonmalaysia"
+                            @if(auth()->user()->nationality=="nonmalaysia")
+                                selected
+                            @endif                       
+                        >Non-Malaysia</option>
+                    </select>
+                    {{-- <input type="text" class="form-control" name="nationality" value="{{ old('nationality') }}" placeholder="nationality"  autofocus> --}}
                     <label for="floatingName">Nationality</label>
                     @if ($errors->has('nationality'))
                         <span class="text-danger text-left">{{ $errors->first('nationality') }}</span>
@@ -162,7 +175,20 @@
 
                 {{-- maritalstatus --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="maritalstatus" value="{{ old('maritalstatus') }}" placeholder="maritalstatus" required="required" autofocus>
+                    <select class="form-control" id="exampleFormControlSelect1" name="maritalstatus">
+                        <option value="single" 
+                            @if(auth()->user()->maritalstatus=="single")
+                                selected
+                            @endif                       
+                        >Single</option>
+    
+                        <option value="nonsingle"
+                            @if(auth()->user()->maritalstatus=="nonsingle")
+                                selected
+                            @endif                       
+                        >Married</option>
+                    </select> 
+                    {{-- <input type="text" class="form-control" name="maritalstatus" value="{{ old('maritalstatus') }}" placeholder="maritalstatus"  autofocus> --}}
                     <label for="floatingName">Marital status</label>
                     @if ($errors->has('maritalstatus'))
                         <span class="text-danger text-left">{{ $errors->first('maritalstatus') }}</span>
@@ -171,7 +197,7 @@
 
                 {{-- children Status --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="children" value="{{ old('children') }}" placeholder="children" required="required" autofocus>
+                    <input type="text" class="form-control" name="children" value="{{ old('children') }}" placeholder="children"  autofocus>
                     <label for="floatingName">Children and PCB deduction</label>
                     @if ($errors->has('children'))
                         <span class="text-danger text-left">{{ $errors->first('children') }}</span>
@@ -182,7 +208,7 @@
 
                 {{-- personalemail --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="personalemail" value="{{ old('personalemail') }}" placeholder="personalemail" required="required" autofocus>
+                    <input type="text" class="form-control" name="personalemail" value="{{ old('personalemail') }}" placeholder="personalemail"  autofocus>
                     <label for="floatingName">Personal Email</label>
                     @if ($errors->has('personalemail'))
                         <span class="text-danger text-left">{{ $errors->first('personalemail') }}</span>
@@ -191,7 +217,7 @@
 
                 {{-- mobilephone --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="mobilephone" value="{{ old('mobilephone') }}" placeholder="mobilephone" required="required" autofocus>
+                    <input type="text" class="form-control" name="mobilephone" value="{{ old('mobilephone') }}" placeholder="mobilephone"  autofocus>
                     <label for="floatingName">Phone Number</label>
                     @if ($errors->has('mobilephone'))
                         <span class="text-danger text-left">{{ $errors->first('mobilephone') }}</span>
@@ -200,7 +226,7 @@
 
                 {{-- Full Street Address --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="streetaddress" value="{{ old('streetaddress') }}" placeholder="streetaddress" required="required" autofocus>
+                    <input type="text" class="form-control" name="streetaddress" value="{{ old('streetaddress') }}" placeholder="streetaddress"  autofocus>
                     <label for="floatingName">Full Street Address</label>
                     @if ($errors->has('streetaddress'))
                         <span class="text-danger text-left">{{ $errors->first('streetaddress') }}</span>
@@ -209,7 +235,7 @@
 
                 {{-- state --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="state" value="{{ old('state') }}" placeholder="state" required="required" autofocus>
+                    <input type="text" class="form-control" name="state" value="{{ old('state') }}" placeholder="state"  autofocus>
                     <label for="floatingName">State</label>
                     @if ($errors->has('state'))
                         <span class="text-danger text-left">{{ $errors->first('state') }}</span>
@@ -218,7 +244,7 @@
 
                 {{-- Postcode --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="postcode" value="{{ old('postcode') }}" placeholder="postcode" required="required" autofocus>
+                    <input type="text" class="form-control" name="postcode" value="{{ old('postcode') }}" placeholder="postcode"  autofocus>
                     <label for="floatingName">Postcode</label>
                     @if ($errors->has('postcode'))
                         <span class="text-danger text-left">{{ $errors->first('postcode') }}</span>
@@ -227,7 +253,7 @@
 
                 {{-- city --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="city" required="required" autofocus>
+                    <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="city"  autofocus>
                     <label for="floatingName">City</label>
                     @if ($errors->has('city'))
                         <span class="text-danger text-left">{{ $errors->first('city') }}</span>
@@ -238,7 +264,7 @@
 
                 {{-- emergencycontactname --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="emergencycontactname" value="{{ old('emergencycontactname') }}" placeholder="emergencycontactname" required="required" autofocus>
+                    <input type="text" class="form-control" name="emergencycontactname" value="{{ old('emergencycontactname') }}" placeholder="emergencycontactname"  autofocus>
                     <label for="floatingName">Emergency Contact Name</label>
                     @if ($errors->has('emergencycontactname'))
                         <span class="text-danger text-left">{{ $errors->first('emergencycontactname') }}</span>
@@ -247,7 +273,7 @@
 
                 {{-- emergencycontactno --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="emergencycontactno" value="{{ old('emergencycontactno') }}" placeholder="emergencycontactno" required="required" autofocus>
+                    <input type="text" class="form-control" name="emergencycontactno" value="{{ old('emergencycontactno') }}" placeholder="emergencycontactno"  autofocus>
                     <label for="floatingName">Emergency Contact number</label>
                     @if ($errors->has('emergencycontactno'))
                         <span class="text-danger text-left">{{ $errors->first('emergencycontactno') }}</span>
@@ -258,7 +284,7 @@
 
                 {{-- joindate --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="joindate" value="{{ old('joindate') }}" placeholder="joindate" required="required" autofocus>
+                    <input type="text" class="form-control" name="joindate" value="{{ old('joindate') }}" placeholder="joindate"  autofocus>
                     <label for="floatingName">Join Date</label>
                     @if ($errors->has('joindate'))
                         <span class="text-danger text-left">{{ $errors->first('joindate') }}</span>
@@ -267,7 +293,7 @@
 
                 {{-- position --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="position" value="{{ old('position') }}" placeholder="position" required="required" autofocus>
+                    <input type="text" class="form-control" name="position" value="{{ old('position') }}" placeholder="position"  autofocus>
                     <label for="floatingName">Position</label>
                     @if ($errors->has('position'))
                         <span class="text-danger text-left">{{ $errors->first('position') }}</span>
@@ -276,7 +302,7 @@
 
                 {{-- location --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="location" value="OrenG Academy, 9A, Jalan P8G1, Presint 8, 62250 Putrajaya, Wilayah Persekutuan Putrajaya" placeholder="location" required="required" autofocus>
+                    <input type="text" class="form-control" name="location" value="OrenG Academy, 9A, Jalan P8G1, Presint 8, 62250 Putrajaya, Wilayah Persekutuan Putrajaya" placeholder="location"  autofocus>
                     <label for="floatingName">Location</label>
                     @if ($errors->has('location'))
                         <span class="text-danger text-left">{{ $errors->first('location') }}</span>
@@ -285,7 +311,7 @@
 
                 {{-- earningfreq --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="earningfreq" value="Monthly" placeholder="earningfreq" required="required" autofocus>
+                    <input type="text" class="form-control" name="earningfreq" value="Monthly" placeholder="earningfreq"  autofocus>
                     <label for="floatingName">Earning Frequency</label>
                     @if ($errors->has('earningfreq'))
                         <span class="text-danger text-left">{{ $errors->first('earningfreq') }}</span>
@@ -296,7 +322,7 @@
 
                 {{-- Contributing EPF --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="epf" value="{{ old('epf') }}" placeholder="epf" required="required" autofocus>
+                    <input type="text" class="form-control" name="epf" value="{{ old('epf') }}" placeholder="epf"  autofocus>
                     <label for="floatingName">Contributing EPF</label>
                     @if ($errors->has('epf'))
                         <span class="text-danger text-left">{{ $errors->first('epf') }}</span>
@@ -305,7 +331,7 @@
                 
                 {{-- socso --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="socsocategory" value="{{ old('socsocategory') }}" placeholder="socsocategory" required="required" autofocus>
+                    <input type="text" class="form-control" name="socsocategory" value="{{ old('socsocategory') }}" placeholder="socsocategory"  autofocus>
                     <label for="floatingName">SOCSO Category</label>
                     @if ($errors->has('socsocategory'))
                         <span class="text-danger text-left">{{ $errors->first('socsocategory') }}</span>
@@ -314,7 +340,7 @@
 
                 {{-- ssfwnumber --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="ssfwnumber" value="{{ old('ssfwnumber') }}" placeholder="ssfwnumber" required="required" autofocus>
+                    <input type="text" class="form-control" name="ssfwnumber" value="{{ old('ssfwnumber') }}" placeholder="ssfwnumber"  autofocus>
                     <label for="floatingName">SSFW number</label>
                     @if ($errors->has('ssfwnumber'))
                         <span class="text-danger text-left">{{ $errors->first('ssfwnumber') }}</span>
@@ -323,7 +349,7 @@
 
                 {{-- pcbnumber --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="pcbnumber" value="{{ old('pcbnumber') }}" placeholder="pcbnumber" required="required" autofocus>
+                    <input type="text" class="form-control" name="pcbnumber" value="{{ old('pcbnumber') }}" placeholder="pcbnumber"  autofocus>
                     <label for="floatingName">PCB Number</label>
                     @if ($errors->has('pcbnumber'))
                         <span class="text-danger text-left">{{ $errors->first('pcbnumber') }}</span>

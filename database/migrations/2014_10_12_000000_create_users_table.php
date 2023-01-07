@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('streetaddress')->nullable();
             $table->string('mobilephone')->nullable();
             $table->string('emergencycontactname')->nullable();
-            $table->string('emetgenctcontactno')->nullable();
+            $table->string('emergencycontactno')->nullable();
             $table->string('joindate')->nullable();
             $table->string('position')->nullable();
             $table->string('ic')->nullable();

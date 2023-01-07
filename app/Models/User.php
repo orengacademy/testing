@@ -31,7 +31,7 @@ class User extends Authenticatable
         'streetaddress',
         'mobilephone',
         'emergencycontactname',
-        'emetgenctcontactno',
+        'emergencycontactno',
         'joindate',
         'position',
         'ic',

@@ -47,7 +47,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Profile Routes
          */
         Route::get('/profile', 'ProfileController@show')->name('profile.show');
-        Route::put('/profile/{id}', [ProfileController::class, 'update']);
+        Route::put('/profile/{id}', 'ProfileController@update');
 
 
         /**
