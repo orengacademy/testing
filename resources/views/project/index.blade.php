@@ -35,18 +35,25 @@
                                 @foreach($project as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td>{{ $item->address }}</td>
-                                        <td>{{ $item->mobile }}</td>
+                                        <td>{{ $item->titleproject }}</td>
+                                        <td>{{ $item->projectcode }}</td>
+                                        <td>{{ $item->client }}</td>
+                                        <td>{{ $item->PMO }}</td>
+                                        <td>{{ $item->Engineers }}</td>
+                                        <td>{{ $item->startdate }}</td>
+                                        <td>{{ $item->enddate }}</td>
+                                        <td>{{ $item->scope }}</td>
+                                        <td>{{ $item->type }}</td>
+                                        <td>{{ $item->status }}</td>
 
                                         <td>
-                                            <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
+                                            <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                                             <form method="POST" action="{{ url('/project' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                <button type="submit" class="w-1 btn btn-sm btn-danger" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                             </form>
                                         </td>
                                     </tr>
