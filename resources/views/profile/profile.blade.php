@@ -5,9 +5,10 @@
     <div class="bg-light p-5 rounded">
         @auth
 
+        
+        <form method="post" action="{{ url('profile/'.auth()->user()->id) }}">
 
-        <form method="post" action="{{ route('login.perform') }}">
-
+            @method('PUT')
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
     
@@ -23,7 +24,7 @@
 
                 {{-- name --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="name" required="required" autofocus>
+                    <input type="text" class="form-control" name="name" value="{{ auth()->user()->name }}" placeholder="name" required="required" autofocus>
                     <label for="floatingName">Full Name</label>
                     @if ($errors->has('name'))
                         <span class="text-danger text-left">{{ $errors->first('name') }}</span>
@@ -32,7 +33,7 @@
         
                 {{-- email --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="email" required="required" autofocus>
+                    <input type="text" class="form-control" name="email" value="{{ auth()->user()->email }}" placeholder="email" required="required" autofocus>
                     <label for="floatingName">Email Address</label>
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>
@@ -41,7 +42,23 @@
 
                 {{-- gender --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="gender" required="required" autofocus>
+                    <select class="form-control" id="exampleFormControlSelect1" name="gender">
+
+                        <option value="male" 
+                            @if(auth()->user()->gender=="male")
+                                selected
+                            @endif                       
+                        >Male</option>
+
+                        <option value="female"
+                            @if(auth()->user()->gender=="female")
+                                selected
+                            @endif                       
+                        >Female</option>
+                      </select>
+
+
+                    {{-- <input type="text" class="form-control" name="gender" value="{{ auth()->user()->gender }}" placeholder="gender" required="required" autofocus> --}}
                     <label for="floatingName">Gender</label>
                     @if ($errors->has('gender'))
                         <span class="text-danger text-left">{{ $errors->first('gender') }}</span>
@@ -50,7 +67,7 @@
 
                 {{-- ID --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="ic" value="{{ old('ic') }}" placeholder="ic" required="ic" autofocus>
+                    <input type="text" class="form-control" name="ic" value="{{ auth()->user()->ic }}" placeholder="ic" autofocus>
                     <label for="floatingName">Identity Card/Registration No.</label>
                     @if ($errors->has('ic'))
                         <span class="text-danger text-left">{{ $errors->first('ic') }}</span>
@@ -59,7 +76,7 @@
 
                 {{-- dob --}}
                 <div class="col-md-4 form-floating">
-                    <input type="date" value="2018-06-12T19:30" class="form-control" name="dob" placeholder="dob" required="dob" autofocus>
+                    <input type="date" value="{{ auth()->user()->dob }}" class="form-control" name="dob" placeholder="dob" autofocus>
                     <label for="floatingName">Date Of Birth</label>
                     @if ($errors->has('dob'))
                         <span class="text-danger text-left">{{ $errors->first('ic') }}</span>
@@ -69,7 +86,20 @@
 
                 {{-- resident Status --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus" required="required" autofocus>
+                    <select class="form-control" id="exampleFormControlSelect1" name="residentstatus">
+                    <option value="resident" 
+                        @if(auth()->user()->residentstatus=="resident")
+                            selected
+                        @endif                       
+                    >Resident</option>
+
+                    <option value="nonresident"
+                        @if(auth()->user()->residentstatus=="nonresident")
+                            selected
+                        @endif                       
+                    >Non-Resident</option>
+                    </select>                    
+                    {{-- <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus" required="required" autofocus> --}}
                     <label for="floatingName">Resident status</label>
                     @if ($errors->has('residentstatus'))
                         <span class="text-danger text-left">{{ $errors->first('residentstatus') }}</span>
@@ -78,7 +108,32 @@
 
                 {{-- race --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race" required="required" autofocus>
+                    <select class="form-control" id="exampleFormControlSelect1" name="race">
+                        <option value="malay" 
+                            @if(auth()->user()->race=="malay")
+                                selected
+                            @endif                       
+                        >Malay</option>
+    
+                        <option value="chinese"
+                            @if(auth()->user()->race=="chinese")
+                                selected
+                            @endif                       
+                        >Chinese</option>
+
+                        <option value="indian"
+                            @if(auth()->user()->race=="indian")
+                                selected
+                            @endif                       
+                        >Indians</option>
+
+                        <option value="others"
+                            @if(auth()->user()->race=="others")
+                                selected
+                            @endif                       
+                        >Others</option>
+                    </select>
+                    {{-- <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race" required="required" autofocus> --}}
                     <label for="floatingName">Race</label>
                     @if ($errors->has('race'))
                         <span class="text-danger text-left">{{ $errors->first('race') }}</span>

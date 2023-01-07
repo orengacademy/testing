@@ -25,7 +25,7 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(RegisterRequest $request)
+    public function update(Request $request, $id)
     {
         //validation rules
 
