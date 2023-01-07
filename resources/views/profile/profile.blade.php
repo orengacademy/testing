@@ -1,6 +1,7 @@
 @extends('layouts.app-master')
 
 @section('content')
+
     <div class="bg-light p-5 rounded">
         @auth
 
@@ -58,7 +59,7 @@
 
                 {{-- dob --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="dob" value="{{ old('dob') }}" placeholder="dob" required="dob" autofocus>
+                    <input type="date" value="2018-06-12T19:30" class="form-control" name="dob" placeholder="dob" required="dob" autofocus>
                     <label for="floatingName">Date Of Birth</label>
                     @if ($errors->has('dob'))
                         <span class="text-danger text-left">{{ $errors->first('ic') }}</span>
