@@ -14,7 +14,7 @@
 
       @auth
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="" class="nav-link px-2 text-secondary">Dashboard</a></li>
         <li><a href="/project" class="nav-link px-2 text-white">Project</a></li>
         <li><a href="/report" class="nav-link px-2 text-white">Report</a></li>
         <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>

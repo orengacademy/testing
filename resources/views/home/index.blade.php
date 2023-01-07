@@ -4,6 +4,13 @@
     <div class="bg-light p-5 rounded">
         @auth
         <p>Hi, {{auth()->user()->name}}</p>
+
+        
+
+
+
+
+
         @endauth
 
         @guest
