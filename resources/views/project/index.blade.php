@@ -21,6 +21,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Title</th>
+                                        <th>Year</th>
                                         <th>Project Code</th>
                                         <th>Client</th>
                                         <th>PMO</th>
@@ -37,6 +38,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->titleproject }}</td>
+                                        <td>{{ $item->year }}</td>
                                         <td>{{ $item->projectcode }}</td>
                                         <td>{{ $item->client }}</td>
                                         <td>{{ $item->PMO }}</td>

@@ -10,6 +10,8 @@
 
         <form action="{{ url('project/' .$project->id) }}" method="post">
 
+          @method("PATCH")
+
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
 

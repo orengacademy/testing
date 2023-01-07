@@ -10,6 +10,6 @@ class Project extends Model
     use HasFactory;
     protected $table = 'projects';
     protected $primaryKey = 'id';
-    protected $fillable = ['titleproject', 'projectcode', 'client', 'PMO', 'Engineers', 'startdate', 'enddateenddate', 'scope', 'type', 'status'];
+    protected $fillable = ['titleproject', 'projectcode', 'year', 'client', 'PMO', 'Engineers', 'startdate', 'enddate', 'scope', 'type', 'status'];
     public $timestamps = false;
 }
