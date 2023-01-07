@@ -51,18 +51,6 @@
             </div>
 
 
-            <div class="col-md-6 form-floating">
-              <div class="form-group">
-            <label for="sel1">Engineer</label>
-            <select class="form-control" name="Engineers" id="Engineers">
-              <option>Farzul</option>
-              <option>Saharuddin</option>
-              <option>Daniel</option>
-              <option>Elman</option>
-            </select>
-          </div>
-          </div>
-
           <div class="col-md-6 form-floating">
             <div class="form-group">
           <label for="sel1">Project Manager (PMO)</label>
@@ -75,18 +63,6 @@
         </div>
         </div>
 
-        <div class="col-md-6 form-floating">
-          <div class="form-group">
-        <label for="sel1">Scope</label>
-        <select class="form-control" name="scope" id="scope">
-          <option>WASA</option>
-          <option>EPT</option>
-          <option>IPT</option>
-          <option>HVA</option>
-        </select>
-      </div>
-      </div>
-
       <div class="col-md-6 form-floating">
         <div class="form-group">
       <label for="sel1">Assessment Type</label>
@@ -98,7 +74,50 @@
     </div>
     </div>
 
-    <div class="col-md-6 form-floating">
+
+      <div class="col-md-6 form-floating">
+          <input type="date" class="form-control" name="startdate" id="startdate" value="{{ old('password') }}" placeholder="Password" required="required">
+          <label for="floatingPassword">Start Date</label>
+          @if ($errors->has('password'))
+              <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+          @endif
+      </div>
+
+      <div class="col-md-6 form-floating">
+          <input type="date" class="form-control" name="enddate" id="enddate" value="{{ old('password') }}" placeholder="Password" required="required">
+          <label for="floatingPassword">End Date</label>
+          @if ($errors->has('password'))
+              <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+          @endif
+      </div>
+
+    <div class="col-md-2 form-floatingp">
+        <label><strong> Scope :</strong></label><br>
+        <label><input type="checkbox" name="scope[]" value="Red"> WASA</label>
+        <label><input type="checkbox" name="scope[]" value="Blue"> EPT</label>
+        <label><input type="checkbox" name="scope[]" value="Green"> IPT</label>
+        <label><input type="checkbox" name="scope[]" value="Yellow"> HVA</label>
+        <label><input type="checkbox" name="scope[]" value="Red"> WSA</label>
+        <label><input type="checkbox" name="scope[]" value="Blue"> API</label>
+        <label><input type="checkbox" name="scope[]" value="Green"> MPT</label>
+        <label><input type="checkbox" name="scope[]" value="Yellow"> NDA</label>
+      </div>
+
+
+      <div class="col-md-4 form-floatingp">
+          <label><strong> Engineer :</strong></label><br>
+          <label><input type="checkbox" name="Engineers[]" value="Red"> Farzul</label>
+          <label><input type="checkbox" name="Engineers[]" value="Blue"> Saharuddin</label>
+          <label><input type="checkbox" name="Engineers[]" value="Green"> Elman</label>
+          <label><input type="checkbox" name="Engineers[]" value="Yellow"> Ilyas</label>
+          <label><input type="checkbox" name="Engineers[]" value="Red"> Daniel</label>
+          <label><input type="checkbox" name="Engineers[]" value="Blue"> Izzat</label>
+          <label><input type="checkbox" name="Engineers[]" value="Green"> Khairul</label>
+          <label><input type="checkbox" name="Engineers[]" value="Yellow"> Syukri</label>
+        </div>
+
+
+    <div class="col-md-4 form-floating">
       <div class="form-group">
     <label for="sel1">Status</label>
     <select class="form-control" name="status" id="status">
@@ -109,21 +128,6 @@
   </div>
   </div>
 
-  <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="startdate" id="startdate" value="{{ old('password') }}" placeholder="Password" required="required">
-      <label for="floatingPassword">Start Date</label>
-      @if ($errors->has('password'))
-          <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-      @endif
-  </div>
-
-  <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="enddate" id="enddate" value="{{ old('password') }}" placeholder="Password" required="required">
-      <label for="floatingPassword">End Date</label>
-      @if ($errors->has('password'))
-          <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-      @endif
-  </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Create Project</button>
             </div>

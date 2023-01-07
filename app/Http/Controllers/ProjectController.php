@@ -37,6 +37,8 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+        $input2['scope'] = $request->input('scope');
+        $input3['Engineers'] = $request->input('Engineers');
         Project::create($input);
         return redirect('project')->with('flash_message', 'Project Addedd!');
     }
