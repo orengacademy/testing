@@ -25,7 +25,6 @@ return new class extends Migration
                 $table->string('scope');
                 $table->string('type');
                 $table->string('status');
-                $table->timestamps();
                 // $table->decimal('value', 8, 2);
             });
         }
