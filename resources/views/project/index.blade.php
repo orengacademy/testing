@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/project/create') }}" class="w-10 btn btn-lg btn-primary" title="Add New Student">
-                            Add New
+                            Add New +
                         </a>
                         <br/>
                         <br/>

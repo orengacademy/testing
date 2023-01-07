@@ -13,21 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-            Schema::create('projects', function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->string('titleproject');
-                $table->string('projectcode');
-                $table->string('client');
-                $table->string('PMO');
-                $table->string('Engineers');
-                $table->date('startdate');
-                $table->date('enddate');
-                $table->string('scope');
-                $table->string('type');
-                $table->string('status');
-                // $table->decimal('value', 8, 2);
-            });
-        }
+
+      Schema::create('projects', function (Blueprint $table) {
+        $table->Increments('id');
+        $table->string('titleproject')->nullable();;
+        $table->string('projectcode')->nullable();;
+        $table->string('client')->nullable();;
+        $table->string('PMO')->nullable();;
+        $table->string('Engineers')->nullable();;
+        $table->date('startdate')->nullable();;
+        $table->date('enddate')->nullable();;
+        $table->string('scope')->nullable();;
+        $table->string('type')->nullable();;
+        $table->string('status')->nullable();;
+        $table->timestamps();
+      });
+  }
 
     /**
      * Reverse the migrations.
