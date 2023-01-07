@@ -11,6 +11,9 @@
             <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
     
             <h1 class="h3 mb-3 fw-normal">Profile Pages</h1>
+
+            <p class="p mb-1 fw-normal">Personal Identity</p>
+
     
             @include('layouts.partials.messages')
             
@@ -27,7 +30,7 @@
                 </div>
         
                 {{-- email --}}
-                <div class="col-md-6 form-floating">
+                <div class="col-xs-3 form-floating">
                     <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="email" required="required" autofocus>
                     <label for="floatingName">Email Address</label>
                     @if ($errors->has('email'))
@@ -36,7 +39,7 @@
                 </div>
 
                 {{-- gender --}}
-                <div class="col-md-6 form-floating">
+                <div class="col-md-4 form-floating">
                     <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="gender" required="required" autofocus>
                     <label for="floatingName">Gender</label>
                     @if ($errors->has('gender'))
@@ -44,12 +47,40 @@
                     @endif
                 </div>
 
+                {{-- ID --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="ic" value="{{ old('ic') }}" placeholder="ic" required="ic" autofocus>
+                    <label for="floatingName">Identity Card/Registration No.</label>
+                    @if ($errors->has('ic'))
+                        <span class="text-danger text-left">{{ $errors->first('ic') }}</span>
+                    @endif
+                </div>
+
+                {{-- dob --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="dob" value="{{ old('dob') }}" placeholder="dob" required="dob" autofocus>
+                    <label for="floatingName">Date Of Birth</label>
+                    @if ($errors->has('dob'))
+                        <span class="text-danger text-left">{{ $errors->first('ic') }}</span>
+                    @endif
+                </div>
+                <p class="p mb-1 mt-4 fw-normal">Resident & Race Information</p>
+
                 {{-- resident Status --}}
                 <div class="col-md-6 form-floating">
                     <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus" required="required" autofocus>
                     <label for="floatingName">Resident status</label>
                     @if ($errors->has('residentstatus'))
                         <span class="text-danger text-left">{{ $errors->first('residentstatus') }}</span>
+                    @endif
+                </div>
+
+                {{-- race --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race" required="required" autofocus>
+                    <label for="floatingName">Race</label>
+                    @if ($errors->has('race'))
+                        <span class="text-danger text-left">{{ $errors->first('race') }}</span>
                     @endif
                 </div>
 
@@ -71,11 +102,180 @@
                     @endif
                 </div>
 
-                
+                <p class="p mb-1 mt-4 fw-normal">Marital & Children Information</p>
 
+                {{-- maritalstatus --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="maritalstatus" value="{{ old('maritalstatus') }}" placeholder="maritalstatus" required="required" autofocus>
+                    <label for="floatingName">Marital status</label>
+                    @if ($errors->has('maritalstatus'))
+                        <span class="text-danger text-left">{{ $errors->first('maritalstatus') }}</span>
+                    @endif
+                </div>
+
+                {{-- children Status --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="children" value="{{ old('children') }}" placeholder="children" required="required" autofocus>
+                    <label for="floatingName">Children and PCB deduction</label>
+                    @if ($errors->has('children'))
+                        <span class="text-danger text-left">{{ $errors->first('children') }}</span>
+                    @endif
+                </div>
+
+                <p class="p mb-1 mt-4 fw-normal">Address Information</p>
+
+                {{-- personalemail --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="personalemail" value="{{ old('personalemail') }}" placeholder="personalemail" required="required" autofocus>
+                    <label for="floatingName">Personal Email</label>
+                    @if ($errors->has('personalemail'))
+                        <span class="text-danger text-left">{{ $errors->first('personalemail') }}</span>
+                    @endif
+                </div>
+
+                {{-- mobilephone --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="mobilephone" value="{{ old('mobilephone') }}" placeholder="mobilephone" required="required" autofocus>
+                    <label for="floatingName">Phone Number</label>
+                    @if ($errors->has('mobilephone'))
+                        <span class="text-danger text-left">{{ $errors->first('mobilephone') }}</span>
+                    @endif
+                </div>
+
+                {{-- Full Street Address --}}
+                <div class="col-xs-3 form-floating">
+                    <input type="text" class="form-control" name="streetaddress" value="{{ old('streetaddress') }}" placeholder="streetaddress" required="required" autofocus>
+                    <label for="floatingName">Full Street Address</label>
+                    @if ($errors->has('streetaddress'))
+                        <span class="text-danger text-left">{{ $errors->first('streetaddress') }}</span>
+                    @endif
+                </div>
+
+                {{-- state --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="state" value="{{ old('state') }}" placeholder="state" required="required" autofocus>
+                    <label for="floatingName">State</label>
+                    @if ($errors->has('state'))
+                        <span class="text-danger text-left">{{ $errors->first('state') }}</span>
+                    @endif
+                </div>
+
+                {{-- Postcode --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="postcode" value="{{ old('postcode') }}" placeholder="postcode" required="required" autofocus>
+                    <label for="floatingName">Postcode</label>
+                    @if ($errors->has('postcode'))
+                        <span class="text-danger text-left">{{ $errors->first('postcode') }}</span>
+                    @endif
+                </div>
+
+                {{-- city --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="city" required="required" autofocus>
+                    <label for="floatingName">City</label>
+                    @if ($errors->has('city'))
+                        <span class="text-danger text-left">{{ $errors->first('city') }}</span>
+                    @endif
+                </div>
+
+                <p class="p mb-1 mt-4 fw-normal">Emergency Contact</p>
+
+                {{-- emergencycontactname --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="emergencycontactname" value="{{ old('emergencycontactname') }}" placeholder="emergencycontactname" required="required" autofocus>
+                    <label for="floatingName">Emergency Contact Name</label>
+                    @if ($errors->has('emergencycontactname'))
+                        <span class="text-danger text-left">{{ $errors->first('emergencycontactname') }}</span>
+                    @endif
+                </div>
+
+                {{-- emergencycontactno --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="emergencycontactno" value="{{ old('emergencycontactno') }}" placeholder="emergencycontactno" required="required" autofocus>
+                    <label for="floatingName">Emergency Contact number</label>
+                    @if ($errors->has('emergencycontactno'))
+                        <span class="text-danger text-left">{{ $errors->first('emergencycontactno') }}</span>
+                    @endif
+                </div>
+
+                <p class="p mb-1 mt-4 fw-normal">Employment Details</p>
+
+                {{-- joindate --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="joindate" value="{{ old('joindate') }}" placeholder="joindate" required="required" autofocus>
+                    <label for="floatingName">Join Date</label>
+                    @if ($errors->has('joindate'))
+                        <span class="text-danger text-left">{{ $errors->first('joindate') }}</span>
+                    @endif
+                </div>
+
+                {{-- position --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="position" value="{{ old('position') }}" placeholder="position" required="required" autofocus>
+                    <label for="floatingName">Position</label>
+                    @if ($errors->has('position'))
+                        <span class="text-danger text-left">{{ $errors->first('position') }}</span>
+                    @endif
+                </div>
+
+                {{-- location --}}
+                <div class="col-xs-3 form-floating">
+                    <input type="text" class="form-control" name="location" value="OrenG Academy, 9A, Jalan P8G1, Presint 8, 62250 Putrajaya, Wilayah Persekutuan Putrajaya" placeholder="location" required="required" autofocus>
+                    <label for="floatingName">Location</label>
+                    @if ($errors->has('location'))
+                        <span class="text-danger text-left">{{ $errors->first('location') }}</span>
+                    @endif
+                </div>
+
+                {{-- earningfreq --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="earningfreq" value="Monthly" placeholder="earningfreq" required="required" autofocus>
+                    <label for="floatingName">Earning Frequency</label>
+                    @if ($errors->has('earningfreq'))
+                        <span class="text-danger text-left">{{ $errors->first('earningfreq') }}</span>
+                    @endif
+                </div>
+
+                <p class="p mb-1 mt-4 fw-normal">Statutory Requirements</p>
+
+                {{-- Contributing EPF --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="epf" value="{{ old('epf') }}" placeholder="epf" required="required" autofocus>
+                    <label for="floatingName">Contributing EPF</label>
+                    @if ($errors->has('epf'))
+                        <span class="text-danger text-left">{{ $errors->first('epf') }}</span>
+                    @endif
+                </div>
                 
-            
-        
+                {{-- socso --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="socsocategory" value="{{ old('socsocategory') }}" placeholder="socsocategory" required="required" autofocus>
+                    <label for="floatingName">SOCSO Category</label>
+                    @if ($errors->has('socsocategory'))
+                        <span class="text-danger text-left">{{ $errors->first('socsocategory') }}</span>
+                    @endif
+                </div>
+
+                {{-- ssfwnumber --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="ssfwnumber" value="{{ old('ssfwnumber') }}" placeholder="ssfwnumber" required="required" autofocus>
+                    <label for="floatingName">SSFW number</label>
+                    @if ($errors->has('ssfwnumber'))
+                        <span class="text-danger text-left">{{ $errors->first('ssfwnumber') }}</span>
+                    @endif
+                </div>
+
+                {{-- pcbnumber --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="pcbnumber" value="{{ old('pcbnumber') }}" placeholder="pcbnumber" required="required" autofocus>
+                    <label for="floatingName">PCB Number</label>
+                    @if ($errors->has('pcbnumber'))
+                        <span class="text-danger text-left">{{ $errors->first('pcbnumber') }}</span>
+                    @endif
+                </div>
+
+
+   
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
             </div>
             @include('auth.partials.copy')
