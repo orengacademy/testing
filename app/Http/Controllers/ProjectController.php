@@ -26,7 +26,9 @@ class ProjectController extends Controller
     public function create()
     {
         return view('project.create');
+        return view('project.assign');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -56,8 +58,8 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        $project = Project::find($id);
-        return view('project.show')->with('project', $project);
+      $project = Project::all();
+      return view ('project.index')->with('project', $project);
     }
 
     /**

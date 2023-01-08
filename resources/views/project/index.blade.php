@@ -57,10 +57,10 @@
   <tr class="header">
     <th style="width:10%;">Client</th>
     <th style="width:10%;">Year</th>
-    <th style="width:20%;">Project Title</th>
+    <th style="width:15%;">Project Title</th>
     <th style="width:15%;">Project Code</th>
     <th style="width:20%;">Project Manager</th>
-    <th style="width:10%;">Status</th>
+    <th style="width:15%;">Status</th>
     <th style="width:20%;">Action</th>
   </tr>
   @foreach($project as $item)
