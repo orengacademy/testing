@@ -46,7 +46,7 @@ return new class extends Migration
             $table->string('ssfwnumber')->nullable();
             $table->string('socsocategory')->nullable();
             $table->string('pcbnumber')->nullable();
-            $table->string('role')->nullable();
+            $table->string('role')->default('others');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

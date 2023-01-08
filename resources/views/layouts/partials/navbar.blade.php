@@ -16,16 +16,30 @@
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <!-- <li><img src="{{ URL('storage/Logo-OrenG.png') }}" width="20" height="30", class="card-img-top" alt="..."> -->
         <li><a href="/" class="nav-link px-2 text-secondary">Dashboard</a></li>
-        @can('isEngineer/TechWriter','isPMO','isAdmin')
+        @canany(['isEngineer/TechWriter', 'isPMO', 'isAdmin'])
         <li><a href="/engineer" class="nav-link px-2 text-white">Engineer</a></li>
         @endcan
+        @canany(['isEngineer/TechWriter', 'isPMO', 'isAdmin'])
         <li><a href="/calendar" class="nav-link px-2 text-white">Calendar</a></li>
+        @endcan
+        @canany(['isPMO', 'isAdmin'])
         <li><a href="/project" class="nav-link px-2 text-white">Project</a></li>
+        @endcan
+        @canany(['isPMO', 'isAdmin','isEngineer/TechWriter'])
         <li><a href="/report" class="nav-link px-2 text-white">Report</a></li>
+        @endcan
+        @canany(['isPMO', 'isAdmin','isEngineer/TechWriter','isFinance/HR','isOthers'])
         <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
+        @endcan
+        @canany(['isPMO', 'isAdmin','isEngineer/TechWriter','isFinance/HR','isOthers'])
         <li><a href="/leave" class="nav-link px-2 text-white">Leave</a></li>
+        @endcan
+        @canany(['isPMO', 'isAdmin','isEngineer/TechWriter','isFinance/HR','isOthers'])
         <li><a href="/payslip" class="nav-link px-2 text-white">Payslips</a></li>
+        @endcan
+        @canany(['isAdmin'])
         <li><a href="/management" class="nav-link px-2 text-white">User Management</a></li>
+        @endcan
         <!-- <li><a href="#" class="nav-link px-2 text-white">User Management</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Leave</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Payslips</a></li>
