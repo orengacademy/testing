@@ -55,18 +55,18 @@
   <tr class="header">
     <th style="width:10%;">Name</th>
     <th style="width:10%;">Email</th>
-    <th style="width:15%;">Role</th>
-    <th style="width:15%;">Created At</th>
+    <th style="width:10%;">Role</th>
+    <th style="width:20%;">Created At</th>
     <th style="width:20%;">Updated At</th>
+    <th style="width:20%;">Action</th>
   </tr>
   @foreach($project as $item)
   <tr>
-    <td>{{ $item->role }}</td>
     <td>{{ $item->name }}</td>
     <td>{{ $item->email }}</td>
-    <td>{{ $item->projectcode }}</td>
-    <td>{{ $item->PMO }}</td>
-    <td>{{ $item->status }}</td>
+    <td>{{ $item->role }}</td>
+    <td>{{ $item->created_at }}</td>
+    <td>{{ $item->updated_at }}</td>
     <td>
         <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
         <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Project"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
