@@ -25,8 +25,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         /**
          * Register Routes
          */
-        Route::get('/register', 'RegisterController@show')->name('register.show');
-        Route::post('/register', 'RegisterController@register')->name('register.perform');
+
 
         /**
          * Login Routes
@@ -39,6 +38,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::group(['middleware' => ['auth']], function() {
 
 
+        Route::get('management/register', 'RegisterController@show')->name('register.show');
+        Route::post('management/register', 'RegisterController@register')->name('register.perform');
         /**
          * Logout Routes
          */
@@ -76,7 +77,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::resource("/engineer", EngineerController::class);
 
         Route::resource("/management", ManagementController::class);
-
 
 
     });

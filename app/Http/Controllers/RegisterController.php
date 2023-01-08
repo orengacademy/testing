@@ -15,7 +15,7 @@ class RegisterController extends Controller
      */
     public function show()
     {
-        return view('auth.register');
+        return view('management.register');
     }
 
     /**
@@ -29,8 +29,6 @@ class RegisterController extends Controller
     {
         $user = User::create($request->validated());
 
-        auth()->login($user);
-
-        return redirect('/')->with('success', "Account successfully registered.");
+        return redirect('/management')->with('success', "Account successfully registered.");
     }
 }

@@ -74,10 +74,18 @@ class ManagementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $project = Project::find($id);
+        $project = User::find($id);
         $input = $request->all();
         $project->update($input);
         return redirect('management')->with('flash_message', 'project Updated!');
+    }
+
+    public function updatepass(Request $request, $id)
+    {
+        $project = User::find($id);
+        $input = $request->all();
+        $project->update($input);
+        return redirect('management.changepassword')->with('flash_message', 'project Updated!');
     }
 
 

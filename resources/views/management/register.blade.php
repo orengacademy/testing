@@ -1,10 +1,11 @@
-@extends('layouts.auth-master')
+@extends('layouts.app-master')
+
 
 @section('content')
+<div class="bg-light p-5 rounded">
     <form method="post" action="{{ route('register.perform') }}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <img class="mb-4" src="{{ URL('storage/Logo-OrenG.png') }}" alt="" width="72" height="57">
 
         <h1 class="h3 mb-3 fw-normal">Register</h1>
 
@@ -62,4 +63,5 @@
 
         @include('auth.partials.copy')
     </form>
+  </div>
 @endsection
