@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('scope')->nullable();
             $table->string('type')->nullable();
             $table->string('status')->nullable();
-            $table->string('startdate')->nullable();
-            $table->string('enddate')->nullable();
+            $table->dateTime('startdate')->nullable();
+            $table->dateTime('enddate')->nullable();
             $table->timestamps();
         });
     }
