@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ManagementController extends Controller
 {
@@ -14,7 +15,8 @@ class ManagementController extends Controller
      */
     public function index()
     {
-        //
+      $project = User::all();
+      return view ('management.index')->with('project', $project);
     }
 
     /**

@@ -51,6 +51,9 @@ class User extends Authenticatable
         'ssfwnumber',
         'socsocategory',
         'pcbnumber',
+        'created_at',
+        'updated_at',
+
     ];
 
     /**

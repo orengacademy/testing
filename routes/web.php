@@ -75,6 +75,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::resource("/engineer", EngineerController::class);
 
+        Route::resource("/management", ManagementController::class);
+
+
 
     });
 });
