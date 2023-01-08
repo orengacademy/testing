@@ -46,7 +46,7 @@
 
 <div class="bg-light p-5 rounded">
   <h1 class="h3 mb-3 fw-normal">Users List</h1>
-  <a href="{{ url('/project/create') }}" class="w-10 btn btn-sm btn-primary" title="Add New Student">
+  <a href="{{ url('/management/add') }}" class="w-10 btn btn-sm btn-primary" title="Add New Student">
       Add New User +
   </a><br><br>
 
@@ -69,9 +69,8 @@
     <td>{{ $item->updated_at }}</td>
     <td>
         <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
-        <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Project"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
-        <a href="{{ url('/project/assign/' . $item->id) }}" title="Assign Engineer"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-user-o" aria-hidden="true"></i></button></a>
-        <form method="POST" action="{{ url('/project' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+        <a href="{{ url('/management/' . $item->id . '/edit') }}" title="Edit Project"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
+        <form method="POST" action="{{ url('/management' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
             <button type="submit" class="w-1 btn btn-sm btn-danger" title="Delete Project" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
