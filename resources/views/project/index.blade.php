@@ -47,9 +47,6 @@
   <h1 class="h3 mb-3 fw-normal">Projects List</h1>
   <a href="{{ url('/project/create') }}" class="w-10 btn btn-sm btn-primary" title="Add New Student">
       Add New Project +
-  </a>
-  <a href="{{ url('/project/assign') }}" class="w-10 btn btn-sm btn-success" title="Add New Student">
-      Assign
   </a><br><br>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for client.." title="Type in a name">
@@ -59,7 +56,7 @@
     <th style="width:10%;">Year</th>
     <th style="width:15%;">Project Title</th>
     <th style="width:15%;">Project Code</th>
-    <th style="width:20%;">Project Manager</th>
+    <th style="width:15%;">Project Manager</th>
     <th style="width:15%;">Status</th>
     <th style="width:20%;">Action</th>
   </tr>
@@ -74,7 +71,7 @@
     <td>
         <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
         <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-
+        <a href="{{ url('/project/ . $item->id . '/assign') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Assign</button></a>
         <form method="POST" action="{{ url('/project' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
