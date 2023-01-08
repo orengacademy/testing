@@ -43,10 +43,10 @@ class ProjectController extends Controller
 
     public function assign()
     {
-        return view('project.edit');
+        return view('project.assign');
     }
 
-    public function assignS(Request $request)
+    public function PostAssign(Request $request)
     {
         $input = $request->all();
         Project::create($input);
