@@ -10,7 +10,7 @@
 
             @method('PUT')
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-            <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
+            <!-- <img class="mb-4" src="{!! url('storage/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
     
             <h1 class="h3 mb-3 fw-normal">Profile Pages</h1>
 
@@ -142,7 +142,7 @@
 
                 {{-- type of resident --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="typeofresident" value="{{ old('typeofresident') }}" placeholder="typeofresident"  autofocus>
+                    <input type="text" class="form-control" name="typeofresident" value="{{ auth()->user()->typeofresident }}" placeholder="typeofresident"  autofocus>
                     <label for="floatingName">Type Of Resident</label>
                     @if ($errors->has('typeofresident'))
                         <span class="text-danger text-left">{{ $errors->first('typeofresident') }}</span>
@@ -280,6 +280,35 @@
                     @endif
                 </div>
 
+                <p class="p mb-1 mt-4 fw-normal">Payment Method</p>
+
+                {{-- paymentmethod --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="paymentmethod" value="{{ old('paymentmethod') }}" placeholder="paymentmethod"  autofocus>
+                    <label for="floatingName">Payment Method</label>
+                    @if ($errors->has('paymentmethod'))
+                        <span class="text-danger text-left">{{ $errors->first('paymentmethod') }}</span>
+                    @endif
+                </div>
+
+                {{-- bank name --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="bankname" value="{{ old('bankname') }}" placeholder="bankname"  autofocus>
+                    <label for="floatingName">Bank Name</label>
+                    @if ($errors->has('bankname'))
+                        <span class="text-danger text-left">{{ $errors->first('bankname') }}</span>
+                    @endif
+                </div>
+
+                {{-- bank account --}}
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" name="bankaccount" value="{{ old('bankaccount') }}" placeholder="bankaccount"  autofocus>
+                    <label for="floatingName">Bank Name</label>
+                    @if ($errors->has('bankaccount'))
+                        <span class="text-danger text-left">{{ $errors->first('bankaccount') }}</span>
+                    @endif
+                </div>
+
                 <p class="p mb-1 mt-4 fw-normal">Employment Details</p>
 
                 {{-- joindate --}}
@@ -358,7 +387,7 @@
 
 
    
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Update Profile</button>
             </div>
             @include('auth.partials.copy')
         </form>
