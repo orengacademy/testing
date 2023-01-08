@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Engineer;
+use Gate;
 
 class EngineerController extends Controller
 {
@@ -17,6 +18,10 @@ class EngineerController extends Controller
 
      public function index()
      {
+        if(!Gate::allows('isAdmin')){
+            abort(404,'Sorry, you are not authorized');
+        }
+
          $project = Engineer::all();
          return view ('engineer.index')->with('project', $project);
      }
