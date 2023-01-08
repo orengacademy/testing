@@ -49,6 +49,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/profile', 'ProfileController@show')->name('profile.show');
         Route::put('/profile/{id}', 'ProfileController@update');
 
+        /**
+         * Calendar Routes
+         */
+        Route::get('calendar', [CalendarController::class, 'index']);
+
+        Route::post('calendar/action', [CalendarController::class, 'action']);
+
+
 
         /**
          * Project Routes
