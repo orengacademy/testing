@@ -41,20 +41,6 @@ class ProjectController extends Controller
         return redirect('project')->with('flash_message', 'Project Addedd!');
     }
 
-    public function assign($id)
-    {
-      $project = Project::find($id);
-      return view('project.assign')->with('project', $project);
-    }
-
-    public function PostAssign(Request $request, $id)
-    {
-      $project = Project::find($id);
-      $input = $request->all();
-      $project->update($input);
-      return redirect('project')->with('flash_message', 'project Updated!');
-    }
-
     /**
      * Display the specified resource.
      *
@@ -92,6 +78,36 @@ class ProjectController extends Controller
         $input = $request->all();
         $project->update($input);
         return redirect('project')->with('flash_message', 'project Updated!');
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function assign($id)
+    {
+      $project = Project::find($id);
+      return view('project.assign')->with('project', $project);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function PostAssign(Request $request, $id)
+    {
+      $project = Project::find($id);
+      $input = $request->all();
+      $project->PostAssign($input);
+      return redirect('project')->with('flash_message', 'project Updated!');
     }
 
     /**

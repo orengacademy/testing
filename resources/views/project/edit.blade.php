@@ -60,6 +60,7 @@
             <option>Fyka</option>
             <option>Rafidah</option>
             <option>Amira</option>
+            <option>Zarihan</option>
           </select>
         </div>
         </div>

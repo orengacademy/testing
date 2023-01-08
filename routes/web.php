@@ -64,7 +64,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         // Route::resource("/project", ProjectController::class);
         Route::get("/project/assign/{id}", 'ProjectController@assign');
-        Route::put("/project/assign/{id}", 'ProjectController@PostAssign');
+        Route::post("/project/assign/{id}", 'ProjectController@PostAssign');
         Route::resource("/project", ProjectController::class);
 
 
