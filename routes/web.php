@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,9 +53,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         /**
          * Calendar Routes
          */
-        Route::get('calendar', [CalendarController::class, 'index']);
+        Route::get('calendar','CalendarController@index');
 
-        Route::post('calendar/action', [CalendarController::class, 'action']);
+        Route::post('calendar/action', 'CalendarController@action');
 
 
 
