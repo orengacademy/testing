@@ -26,9 +26,7 @@ class ProjectController extends Controller
     public function create()
     {
         return view('project.create');
-        return view('project.assign');
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -43,7 +41,12 @@ class ProjectController extends Controller
         return redirect('project')->with('flash_message', 'Project Addedd!');
     }
 
-    public function assign(Request $request)
+    public function assign()
+    {
+        return view('project.edit');
+    }
+
+    public function assignS(Request $request)
     {
         $input = $request->all();
         Project::create($input);
