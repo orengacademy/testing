@@ -61,6 +61,7 @@
     <th style="width:20%;">Project Manager</th>
     <th style="width:20%;">Start Date</th>
     <th style="width:20%;">End Date</th>
+    <th style="width:20%;">Status</th>
 
     <!-- <th style="width:20%;">Action</th> -->
   </tr>
