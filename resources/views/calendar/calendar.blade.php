@@ -40,7 +40,7 @@ $(document).ready(function () {
             center:'title',
             right:'month,agendaWeek,agendaDay'
         },
-        events:'/full-calender',
+        events:'/calendar',
         selectable:true,
         selectHelper: true,
         select:function(start, end, allDay)
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
 
                 $.ajax({
-                    url:"/full-calender/action",
+                    url:"/calendar/action",
                     type:"POST",
                     data:{
                         title: title,
@@ -78,7 +78,7 @@ $(document).ready(function () {
             var title = event.title;
             var id = event.id;
             $.ajax({
-                url:"/full-calender/action",
+                url:"/calendarcalendar/action",
                 type:"POST",
                 data:{
                     title: title,
