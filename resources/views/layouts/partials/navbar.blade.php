@@ -39,7 +39,7 @@
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Leave</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a> -->
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
-          <img class="logo-img" src="images\Logo-OrenG.png"
+          <!-- <img class="logo-img" src="images\Logo-OrenG.png" -->
         </div>
       @endauth
 
