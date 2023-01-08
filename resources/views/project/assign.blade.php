@@ -8,7 +8,7 @@
     <div class="bg-light p-5 rounded">
         @auth
 
-        <form action="{{ url('project/assign' .$project->id) }}" method="post">
+        <form action="{{ url('project/assign/' .$project->id) }}" method="post">
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <!-- <img class="mb-4" src="{!! url('images/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
@@ -20,18 +20,13 @@
             <div class = "form-group row g-3" >
 
 
-          <div class="col-md-6 form-floating">
-            <div class="form-group">
-          <label for="sel1">Client</label>
-
-          <select class="form-control" name="client" id="PMO" value=''>
-            @foreach($project as $item)
-            <option value="{{$item->id}}">{{$item->client}}</option>
-            @endforeach
-          </select>
-
-        </div>
-        </div>
+              <div class="col-md-6 form-floating">
+                  <input type="text" class="form-control" name="client" id="client" value="{{$project->client}}" placeholder="Password" required="required">
+                  <label for="floatingPassword">Client/Agency</label>
+                  @if ($errors->has('password'))
+                      <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                  @endif
+              </div>
 
         <div class="col-md-6 form-floating">
           <div class="form-group">
