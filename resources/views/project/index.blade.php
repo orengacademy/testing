@@ -71,7 +71,7 @@
     <td>
         <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
         <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-        <a href="{{ url('/project/ . $item->id . '/assign') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Assign</button></a>
+        <a href="{{ url('/project/' . $item->id . '/assign') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Assign</button></a>
         <form method="POST" action="{{ url('/project' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
