@@ -4,10 +4,9 @@
 
     <div class="bg-light p-5 rounded">
         @auth
-        <p>Hi, {{auth()->user()->name}}</p>
 
-
-        <br><br>
+        <img class="mb-4" src="{{ URL('storage/Logo-OrenG.png') }}" alt="" width="" height="57">
+        <!-- <p><strong>Oreng Academy Sdn Bhd</strong></p> -->
         <!-- <div class="card mb-3">
         <img src="{{ URL('storage/Logo-OrenG.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -19,11 +18,8 @@
 
 
         <div class="card text-center">
-  <div class="card-header">
-    Featured
-  </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    <h5 class="card-title">Hi, {{auth()->user()->name}}</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
