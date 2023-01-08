@@ -48,9 +48,9 @@ class ProjectController extends Controller
 
     public function PostAssign(Request $request)
     {
-        $input = $request->all();
-        Project::create($input);
-        return redirect('project')->with('flash_message', 'Project Addedd!');
+      $input = $request->all();
+      Project::assign($input);
+      return redirect('project')->with('flash_message', 'Project Addedd!');
     }
 
     /**
