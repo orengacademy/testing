@@ -48,8 +48,8 @@
   <a href="{{ url('/project/create') }}" class="w-10 btn btn-sm btn-primary" title="Add New Student">
       Add New Project +
   </a>
-  <a href="{{ url('/project/create') }}" class="w-10 btn btn-sm btn-success" title="Add New Student">
-      Assign Engineers
+  <a href="{{ url('/project/assign') }}" class="w-10 btn btn-sm btn-success" title="Add New Student">
+      Assign
   </a><br><br>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for client.." title="Type in a name">

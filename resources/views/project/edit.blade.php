@@ -52,19 +52,6 @@
                 @endif
             </div>
 
-
-            <div class="col-md-6 form-floating">
-              <div class="form-group">
-            <label for="sel1">Engineer</label>
-            <select class="form-control" name="Engineers" id="Engineers" value="{{$project->Engineers}}" >
-              <option>Farzul</option>
-              <option>Saharuddin</option>
-              <option>Daniel</option>
-              <option>Elman</option>
-            </select>
-          </div>
-          </div>
-
           <div class="col-md-6 form-floating">
             <div class="form-group">
           <label for="sel1">Project Manager (PMO)</label>
@@ -77,28 +64,6 @@
         </div>
         </div>
 
-        <div class="col-md-6 form-floating">
-          <div class="form-group">
-        <label for="sel1">Scope</label>
-        <select class="form-control" name="scope" id="scope" value="{{$project->scope}}">
-          <option>WASA</option>
-          <option>EPT</option>
-          <option>IPT</option>
-          <option>HVA</option>
-        </select>
-      </div>
-      </div>
-
-      <div class="col-md-6 form-floating">
-        <div class="form-group">
-      <label for="sel1">Assessment Type</label>
-      <select class="form-control" name="type" id="type" value="{{$project->type}}">
-        <option>Pre</option>
-        <option>Post</option>
-        <option>Hardening</option>
-      </select>
-    </div>
-    </div>
 
     <div class="col-md-6 form-floating">
       <div class="form-group">
