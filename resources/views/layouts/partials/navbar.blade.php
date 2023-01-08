@@ -15,7 +15,7 @@
       @auth
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/" class="nav-link px-2 text-secondary">Dashboard</a></li>
-        <li><a href="/engineer" class="nav-link px-2 text-white">Engineer</a></li
+        <li><a href="/engineer" class="nav-link px-2 text-white">Engineer</a></li>
         <li><a href="/project" class="nav-link px-2 text-white">Project</a></li>
         <li><a href="/report" class="nav-link px-2 text-white">Report</a></li>
         <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
@@ -39,6 +39,7 @@
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Leave</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a> -->
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
+          <img class="logo-img" src="images\Logo-OrenG.png"
         </div>
       @endauth
 
