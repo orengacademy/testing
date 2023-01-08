@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\User; //add Project Model - Data is coming from the database via Model.
 
 class ManagementController extends Controller
 {
@@ -15,8 +14,8 @@ class ManagementController extends Controller
      */
     public function index()
     {
-      $project = User::all();
-      return view ('management.index')->with('project', $project);
+        $project = User::all();
+        return view ('management.index')->with('project', $project);
     }
 
     /**
@@ -26,7 +25,7 @@ class ManagementController extends Controller
      */
     public function create()
     {
-        //
+        return view('management.create');
     }
 
     /**
@@ -37,7 +36,9 @@ class ManagementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        User::create($input);
+        return redirect('management')->with('flash_message', 'Project Addedd!');
     }
 
     /**
@@ -48,7 +49,8 @@ class ManagementController extends Controller
      */
     public function show($id)
     {
-        //
+      $project = User::all();
+      return view ('management.index')->with('project', $project);
     }
 
     /**
@@ -59,7 +61,8 @@ class ManagementController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = User::find($id);
+        return view('management.edit')->with('project', $project);
     }
 
     /**
@@ -71,8 +74,21 @@ class ManagementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::find($id);
+        $input = $request->all();
+        $project->update($input);
+        return redirect('management')->with('flash_message', 'project Updated!');
     }
+
+
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
     /**
      * Remove the specified resource from storage.
@@ -82,6 +98,7 @@ class ManagementController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect('management')->with('flash_message', 'Project deleted!');
     }
 }
