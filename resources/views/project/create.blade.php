@@ -71,11 +71,12 @@
           <option>Completed</option>
           <option>In Review</option>
           <option>In Progress</option>
+          <option>Incoming</option>
         </select>
       </div>
       </div>
 
-      <div class="col-md-6 form-floating">
+      <!-- <div class="col-md-6 form-floating">
           <input type="date" class="form-control" name="startdate" id="startdate" value="{{ old('password') }}" placeholder="Password" required="required">
           <label for="floatingPassword">Start Date</label>
           @if ($errors->has('password'))
@@ -89,7 +90,7 @@
           @if ($errors->has('password'))
               <span class="text-danger text-left">{{ $errors->first('password') }}</span>
           @endif
-      </div>
+      </div> -->
 
 
 

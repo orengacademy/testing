@@ -73,24 +73,9 @@
       <option>Completed</option>
       <option>In Review</option>
       <option>In Progress</option>
+      <option>Incoming</option>
     </select>
   </div>
-  </div>
-
-  <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="startdate" id="startdate" value="{{$project->startdate}}" placeholder="Password" required="required">
-      <label for="floatingPassword">Start Date</label>
-      @if ($errors->has('password'))
-          <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-      @endif
-  </div>
-
-  <div class="col-md-6 form-floating">
-      <input type="date" class="form-control" name="enddate" id="enddate" value="{{$project->enddate}}" placeholder="Password" required="required">
-      <label for="floatingPassword">End Date</label>
-      @if ($errors->has('password'))
-          <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-      @endif
   </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Update Project</button>

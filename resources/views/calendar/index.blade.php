@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>How to Use Fullcalendar in Laravel 8</title>
-    
+
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -13,16 +13,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
 </head>
 <body>
-@section('content')  
+@section('content')
 <div class="container bg-light p-5 rounded">
 
-    <h1 class="h3 mb-3 fw-normal">Calendar Pages</h1>
+    <h1 class="h3 mb-3 fw-normal">Calendar</h1>
 
     <div id="calendar"></div>
 
 </div>
 @endsection
-   
+
 <script>
     $(document).ready(function() {
         var display = @json($events);
@@ -35,10 +35,10 @@
                 },
                 events: display
             })
-                
+
     });
 
 </script>
-  
+
 </body>
 </html>

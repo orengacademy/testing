@@ -106,6 +106,7 @@ class ProjectController extends Controller
     {
       $project = Project::find($id);
       $input = $request->all();
+      $input2['Engineers'] = $request->input('Engineers');
       $project->update($input);
       return redirect('project')->with('flash_message', 'project Updated!');
     }

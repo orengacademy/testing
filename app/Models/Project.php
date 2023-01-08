@@ -12,4 +12,15 @@ class Project extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['titleproject', 'projectcode', 'year', 'client', 'PMO', 'Engineers', 'startdate', 'enddate', 'scope', 'type', 'status'];
     public $timestamps = false;
+
+    public function setCategoryAttribute($value)
+    {
+        $this->attributes['Engineers'] = json_encode($value);
+    }
+
+    public function getCategoryAttribute($value)
+    {
+        return $this->attributes['Engineers'] = json_decode($value);
+    }
+
 }

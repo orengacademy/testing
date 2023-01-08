@@ -5,21 +5,21 @@
     <div class="bg-light p-5 rounded">
         @auth
 
-        
+
         <form method="post" action="{{ url('profile/'.auth()->user()->id) }}">
 
             @method('PUT')
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <!-- <img class="mb-4" src="{!! url('storage/OrenG-Logo-3-7-768x276.svg') !!}" alt="" width="72" height="57"> -->
-    
-            <h1 class="h3 mb-3 fw-normal">Profile Pages</h1>
+
+            <h1 class="h3 mb-3 fw-normal">Profile</h1>
 
             <p class="p mb-1 fw-normal">Personal Identity</p>
 
-    
+
             @include('layouts.partials.messages')
-            
-            
+
+
             <div class = "form-group row g-2" >
 
                 {{-- name --}}
@@ -30,10 +30,10 @@
                         <span class="text-danger text-left">{{ $errors->first('name') }}</span>
                     @endif
                 </div>
-        
+
                 {{-- email --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="email" value="{{ auth()->user()->email }}" placeholder="email"  autofocus>
+                    <input type="text" class="form-control" name="email" value="{{ auth()->user()->email }}" placeholder="email"  autofocus disabled>
                     <label for="floatingName">Email Address</label>
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>
@@ -44,16 +44,16 @@
                 <div class="col-md-4 form-floating">
                     <select class="form-control" id="exampleFormControlSelect1" name="gender">
 
-                        <option value="male" 
+                        <option value="male"
                             @if(auth()->user()->gender=="male")
                                 selected
-                            @endif                       
+                            @endif
                         >Male</option>
 
                         <option value="female"
                             @if(auth()->user()->gender=="female")
                                 selected
-                            @endif                       
+                            @endif
                         >Female</option>
                       </select>
 
@@ -87,18 +87,18 @@
                 {{-- resident Status --}}
                 <div class="col-md-6 form-floating">
                     <select class="form-control" id="exampleFormControlSelect1" name="residentstatus">
-                    <option value="resident" 
+                    <option value="resident"
                         @if(auth()->user()->residentstatus=="resident")
                             selected
-                        @endif                       
+                        @endif
                     >Resident</option>
 
                     <option value="nonresident"
                         @if(auth()->user()->residentstatus=="nonresident")
                             selected
-                        @endif                       
+                        @endif
                     >Non-Resident</option>
-                    </select>                    
+                    </select>
                     {{-- <input type="text" class="form-control" name="residentstatus" value="{{ old('residentstatus') }}" placeholder="residentstatus"  autofocus> --}}
                     <label for="floatingName">Resident status</label>
                     @if ($errors->has('residentstatus'))
@@ -109,28 +109,28 @@
                 {{-- race --}}
                 <div class="col-md-6 form-floating">
                     <select class="form-control" id="exampleFormControlSelect1" name="race">
-                        <option value="malay" 
+                        <option value="malay"
                             @if(auth()->user()->race=="malay")
                                 selected
-                            @endif                       
+                            @endif
                         >Malay</option>
-    
+
                         <option value="chinese"
                             @if(auth()->user()->race=="chinese")
                                 selected
-                            @endif                       
+                            @endif
                         >Chinese</option>
 
                         <option value="indian"
                             @if(auth()->user()->race=="indian")
                                 selected
-                            @endif                       
+                            @endif
                         >Indians</option>
 
                         <option value="others"
                             @if(auth()->user()->race=="others")
                                 selected
-                            @endif                       
+                            @endif
                         >Others</option>
                     </select>
                     {{-- <input type="text" class="form-control" name="race" value="{{ old('race') }}" placeholder="race"  autofocus> --}}
@@ -152,16 +152,16 @@
                 {{-- nationality --}}
                 <div class="col-md-6 form-floating">
                     <select class="form-control" id="exampleFormControlSelect1" name="nationality">
-                        <option value="malaysia" 
+                        <option value="malaysia"
                             @if(auth()->user()->nationality=="malaysia")
                                 selected
-                            @endif                       
+                            @endif
                         >Malaysia</option>
-    
+
                         <option value="nonmalaysia"
                             @if(auth()->user()->nationality=="nonmalaysia")
                                 selected
-                            @endif                       
+                            @endif
                         >Non-Malaysia</option>
                     </select>
                     {{-- <input type="text" class="form-control" name="nationality" value="{{ old('nationality') }}" placeholder="nationality"  autofocus> --}}
@@ -185,18 +185,18 @@
                 {{-- maritalstatus --}}
                 <div class="col-md-6 form-floating">
                     <select class="form-control" id="exampleFormControlSelect1" name="maritalstatus">
-                        <option value="single" 
+                        <option value="single"
                             @if(auth()->user()->maritalstatus=="single")
                                 selected
-                            @endif                       
+                            @endif
                         >Single</option>
-    
+
                         <option value="nonsingle"
                             @if(auth()->user()->maritalstatus=="nonsingle")
                                 selected
-                            @endif                       
+                            @endif
                         >Married</option>
-                    </select> 
+                    </select>
                     {{-- <input type="text" class="form-control" name="maritalstatus" value="{{ old('maritalstatus') }}" placeholder="maritalstatus"  autofocus> --}}
                     <label for="floatingName">Marital status</label>
                     @if ($errors->has('maritalstatus'))
@@ -366,7 +366,7 @@
                         <span class="text-danger text-left">{{ $errors->first('epf') }}</span>
                     @endif
                 </div>
-                
+
                 {{-- socso --}}
                 <div class="col-md-6 form-floating">
                     <input type="text" class="form-control" name="socsocategory" value="{{ auth()->user()->socsocategory }}" placeholder="socsocategory"  autofocus>
@@ -395,7 +395,7 @@
                 </div>
 
 
-   
+
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Update Profile</button>
             </div>
             @include('auth.partials.copy')
