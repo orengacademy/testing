@@ -41,17 +41,18 @@ class ProjectController extends Controller
         return redirect('project')->with('flash_message', 'Project Addedd!');
     }
 
-    public function assign()
+    public function assign($id)
     {
-        $project = Project::all();
-        return view('project.assign')->with('project', $project);;
+      $project = Project::find($id);
+      return view('project.assign')->with('project', $project);
     }
 
-    public function PostAssign(Request $request)
+    public function PostAssign(Request $request, $id)
     {
+      $project = Project::find($id);
       $input = $request->all();
-      Project::assign($input);
-      return redirect('project')->with('flash_message', 'Project Addedd!');
+      $project->update($input);
+      return redirect('project')->with('flash_message', 'project Updated!');
     }
 
     /**

@@ -5,6 +5,7 @@
       @auth
 
 <!-- testing table -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 * {
@@ -56,9 +57,9 @@
     <th style="width:10%;">Year</th>
     <th style="width:15%;">Project Title</th>
     <th style="width:15%;">Project Code</th>
-    <th style="width:15%;">Project Manager</th>
+    <th style="width:20%;">Project Manager</th>
     <th style="width:15%;">Status</th>
-    <th style="width:20%;">Action</th>
+    <th style="width:15%;">Action</th>
   </tr>
   @foreach($project as $item)
   <tr>
@@ -70,12 +71,12 @@
     <td>{{ $item->status }}</td>
     <td>
         <!-- <a href="{{ url('/project/' . $item->id) }}" title="View Student"><button class="w-10 btn btn-lg btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
-        <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-        <a href="{{ url('/project/' . $item->id . '/assign') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Assign</button></a>
+        <a href="{{ url('/project/' . $item->id . '/edit') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
+        <a href="{{ url('/project/assign' . $item->id . '/assign') }}" title="Edit Student"><button class="w-1 btn btn-sm btn-success"><i class="fa fa-user-o" aria-hidden="true"></i></button></a>
         <form method="POST" action="{{ url('/project' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button type="submit" class="w-1 btn btn-sm btn-danger" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+            <button type="submit" class="w-1 btn btn-sm btn-danger" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
         </form>
     </td>
 
