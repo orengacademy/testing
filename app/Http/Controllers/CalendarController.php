@@ -15,7 +15,7 @@ class CalendarController extends Controller
         foreach($projects as $project)
         {
             $events[] = [
-                'title' => $project->titleproject,
+                'title' => $project->Engineers,
                 'start' => $project->startdate,
                 'end' => $project->enddate,
             ];
