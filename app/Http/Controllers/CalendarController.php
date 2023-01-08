@@ -15,13 +15,14 @@ class CalendarController extends Controller
         foreach($projects as $project)
         {
             $events[] = [
-                'projectitle' => $booking->title,
-                'startdate' => $booking->start_date,
-                'enddate' => $booking->end_date,
-            ]
+                'title' => $project->titleproject,
+                'start' => $project->startdate,
+                'end' => $project->enddate,
+            ];
 
         }
-        return view('calendar.index');
+
+        return view('calendar.index',['events'=>$events]);
 
     }
 }

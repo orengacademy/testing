@@ -53,7 +53,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         /**
          * Calendar Routes
          */
-        Route::get('calendar','CalendarController@index');
+        Route::get('calendar','CalendarController@index')->name('calendar.index');;
 
         // Route::post('calendar/action', 'CalendarController@action');
 
