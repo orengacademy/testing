@@ -22,8 +22,8 @@
         <li><a href="/report" class="nav-link px-2 text-white">Report</a></li>
         <li><a href="/profile" class="nav-link px-2 text-white">Profile</a></li>
         <li><a href="/leave" class="nav-link px-2 text-white">Leave</a></li>
-        <li><a href="/leave" class="nav-link px-2 text-white">Payslips</a></li>
-        <li><a href="/leave" class="nav-link px-2 text-white">User Management</a></li>
+        <li><a href="/payslip" class="nav-link px-2 text-white">Payslips</a></li>
+        <li><a href="/management" class="nav-link px-2 text-white">User Management</a></li>
         <!-- <li><a href="#" class="nav-link px-2 text-white">User Management</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Leave</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Payslips</a></li>
