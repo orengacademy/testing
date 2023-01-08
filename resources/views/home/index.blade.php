@@ -2,10 +2,11 @@
 
 @section('content')
 
-    <div class="bg-light p-5 rounded">
+    <div >
         @auth
 
-        <img class="mb-4" src="{{ URL('storage/Logo-OrenG.png') }}" alt="" width="" height="57">
+        <br>
+        <img class="mb-4" src="{{ URL('storage/Logo-OrenG.png') }}" alt="" width="" height=40>
         <!-- <p><strong>Oreng Academy Sdn Bhd</strong></p> -->
         <!-- <div class="card mb-3">
         <img src="{{ URL('storage/Logo-OrenG.png') }}" class="card-img-top" alt="...">
@@ -16,6 +17,33 @@
         </div>
         </div> -->
 
+        <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="{{ URL('storage/project.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Total Project</h5>
+      <h5>{{$project}}</h5>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{{ URL('storage/staff.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Total Staff</h5>
+      <h5>{{$staff}}</h5>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{{ URL('storage/leave.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Total Leave</h5>
+      <h5>5</h5>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+    </div>
+  </div>
+</div><br>
+
 
         <div class="card text-center">
   <div class="card-body">
@@ -23,32 +51,9 @@
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+
 </div><br><br>
 
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
