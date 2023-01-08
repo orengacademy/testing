@@ -14,6 +14,7 @@
 
       @auth
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><img src="{{ URL('storage/Logo-OrenG.png') }}" width="20" height="30", class="card-img-top" alt="...">
         <li><a href="/" class="nav-link px-2 text-secondary">Dashboard</a></li>
         <li><a href="/engineer" class="nav-link px-2 text-white">Engineer</a></li>
         <li><a href="/project" class="nav-link px-2 text-white">Project</a></li>
@@ -39,7 +40,6 @@
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Leave</a>
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Payslips</a> -->
           <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
-          <!-- <img class="logo-img" src="images\Logo-OrenG.png" -->
         </div>
       @endauth
 
