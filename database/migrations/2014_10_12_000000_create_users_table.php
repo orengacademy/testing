@@ -41,7 +41,7 @@ return new class extends Migration
             $table->string('bankname')->nullable();
             $table->string('bankaccount')->nullable();
             $table->string('earningfreq')->nullable();
-            $table->string('location')->nullable();
+            $table->string('location')->default('OrenG Academy, 9A, Jalan P8G1, Presint 8, 62250 Putrajaya, Wilayah Persekutuan Putrajaya');
             $table->string('epf')->nullable();
             $table->string('ssfwnumber')->nullable();
             $table->string('socsocategory')->nullable();

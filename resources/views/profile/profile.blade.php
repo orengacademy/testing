@@ -171,6 +171,15 @@
                     @endif
                 </div>
 
+                {{-- Disability --}}
+                <div class="col-md-4 form-floating">
+                    <input type="text" class="form-control" name="disabilitystatus" value="{{ auth()->user()->disabilitystatus }}" placeholder="disabilitystatus"  autofocus>
+                    <label for="floatingName">disabilitystatus</label>
+                    @if ($errors->has('disabilitystatus'))
+                        <span class="text-danger text-left">{{ $errors->first('disabilitystatus') }}</span>
+                    @endif
+                </div>
+
                 <p class="p mb-1 mt-4 fw-normal">Marital & Children Information</p>
 
                 {{-- maritalstatus --}}
@@ -197,7 +206,7 @@
 
                 {{-- children Status --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="children" value="{{ old('children') }}" placeholder="children"  autofocus>
+                    <input type="text" class="form-control" name="children" value="{{ auth()->user()->children }}" placeholder="children"  autofocus>
                     <label for="floatingName">Children and PCB deduction</label>
                     @if ($errors->has('children'))
                         <span class="text-danger text-left">{{ $errors->first('children') }}</span>
@@ -208,7 +217,7 @@
 
                 {{-- personalemail --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="personalemail" value="{{ old('personalemail') }}" placeholder="personalemail"  autofocus>
+                    <input type="text" class="form-control" name="personalemail" value="{{ auth()->user()->personalemail }}" placeholder="personalemail"  autofocus>
                     <label for="floatingName">Personal Email</label>
                     @if ($errors->has('personalemail'))
                         <span class="text-danger text-left">{{ $errors->first('personalemail') }}</span>
@@ -217,7 +226,7 @@
 
                 {{-- mobilephone --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="mobilephone" value="{{ old('mobilephone') }}" placeholder="mobilephone"  autofocus>
+                    <input type="text" class="form-control" name="mobilephone" value="{{ auth()->user()->mobilephone }}" placeholder="mobilephone"  autofocus>
                     <label for="floatingName">Phone Number</label>
                     @if ($errors->has('mobilephone'))
                         <span class="text-danger text-left">{{ $errors->first('mobilephone') }}</span>
@@ -226,7 +235,7 @@
 
                 {{-- Full Street Address --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="streetaddress" value="{{ old('streetaddress') }}" placeholder="streetaddress"  autofocus>
+                    <input type="text" class="form-control" name="streetaddress" value="{{ auth()->user()->streetaddress }}" placeholder="streetaddress"  autofocus>
                     <label for="floatingName">Full Street Address</label>
                     @if ($errors->has('streetaddress'))
                         <span class="text-danger text-left">{{ $errors->first('streetaddress') }}</span>
@@ -235,7 +244,7 @@
 
                 {{-- state --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="state" value="{{ old('state') }}" placeholder="state"  autofocus>
+                    <input type="text" class="form-control" name="state" value="{{ auth()->user()->state }}" placeholder="state"  autofocus>
                     <label for="floatingName">State</label>
                     @if ($errors->has('state'))
                         <span class="text-danger text-left">{{ $errors->first('state') }}</span>
@@ -244,7 +253,7 @@
 
                 {{-- Postcode --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="postcode" value="{{ old('postcode') }}" placeholder="postcode"  autofocus>
+                    <input type="text" class="form-control" name="postcode" value="{{ auth()->user()->postcode }}" placeholder="postcode"  autofocus>
                     <label for="floatingName">Postcode</label>
                     @if ($errors->has('postcode'))
                         <span class="text-danger text-left">{{ $errors->first('postcode') }}</span>
@@ -253,7 +262,7 @@
 
                 {{-- city --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="city"  autofocus>
+                    <input type="text" class="form-control" name="city" value="{{ auth()->user()->city }}" placeholder="city"  autofocus>
                     <label for="floatingName">City</label>
                     @if ($errors->has('city'))
                         <span class="text-danger text-left">{{ $errors->first('city') }}</span>
@@ -264,7 +273,7 @@
 
                 {{-- emergencycontactname --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="emergencycontactname" value="{{ old('emergencycontactname') }}" placeholder="emergencycontactname"  autofocus>
+                    <input type="text" class="form-control" name="emergencycontactname" value="{{ auth()->user()->emergencycontactname }}" placeholder="emergencycontactname"  autofocus>
                     <label for="floatingName">Emergency Contact Name</label>
                     @if ($errors->has('emergencycontactname'))
                         <span class="text-danger text-left">{{ $errors->first('emergencycontactname') }}</span>
@@ -273,7 +282,7 @@
 
                 {{-- emergencycontactno --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="emergencycontactno" value="{{ old('emergencycontactno') }}" placeholder="emergencycontactno"  autofocus>
+                    <input type="text" class="form-control" name="emergencycontactno" value="{{ auth()->user()->emergencycontactno }}" placeholder="emergencycontactno"  autofocus>
                     <label for="floatingName">Emergency Contact number</label>
                     @if ($errors->has('emergencycontactno'))
                         <span class="text-danger text-left">{{ $errors->first('emergencycontactno') }}</span>
@@ -284,7 +293,7 @@
 
                 {{-- paymentmethod --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="paymentmethod" value="{{ old('paymentmethod') }}" placeholder="paymentmethod"  autofocus>
+                    <input type="text" class="form-control" name="paymentmethod" value="{{ auth()->user()->paymentmethod }}" placeholder="paymentmethod"  autofocus>
                     <label for="floatingName">Payment Method</label>
                     @if ($errors->has('paymentmethod'))
                         <span class="text-danger text-left">{{ $errors->first('paymentmethod') }}</span>
@@ -293,7 +302,7 @@
 
                 {{-- bank name --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="bankname" value="{{ old('bankname') }}" placeholder="bankname"  autofocus>
+                    <input type="text" class="form-control" name="bankname" value="{{ auth()->user()->bankname }}" placeholder="bankname"  autofocus>
                     <label for="floatingName">Bank Name</label>
                     @if ($errors->has('bankname'))
                         <span class="text-danger text-left">{{ $errors->first('bankname') }}</span>
@@ -302,7 +311,7 @@
 
                 {{-- bank account --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="bankaccount" value="{{ old('bankaccount') }}" placeholder="bankaccount"  autofocus>
+                    <input type="text" class="form-control" name="bankaccount" value="{{ auth()->user()->bankaccount }}" placeholder="bankaccount"  autofocus>
                     <label for="floatingName">Bank Name</label>
                     @if ($errors->has('bankaccount'))
                         <span class="text-danger text-left">{{ $errors->first('bankaccount') }}</span>
@@ -313,7 +322,7 @@
 
                 {{-- joindate --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="joindate" value="{{ old('joindate') }}" placeholder="joindate"  autofocus>
+                    <input type="text" class="form-control" name="joindate" value="{{ auth()->user()->joindate }}" placeholder="joindate"  autofocus>
                     <label for="floatingName">Join Date</label>
                     @if ($errors->has('joindate'))
                         <span class="text-danger text-left">{{ $errors->first('joindate') }}</span>
@@ -322,7 +331,7 @@
 
                 {{-- position --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="position" value="{{ old('position') }}" placeholder="position"  autofocus>
+                    <input type="text" class="form-control" name="position" value="{{ auth()->user()->position }}" placeholder="position"  autofocus>
                     <label for="floatingName">Position</label>
                     @if ($errors->has('position'))
                         <span class="text-danger text-left">{{ $errors->first('position') }}</span>
@@ -331,7 +340,7 @@
 
                 {{-- location --}}
                 <div class="col-xs-3 form-floating">
-                    <input type="text" class="form-control" name="location" value="OrenG Academy, 9A, Jalan P8G1, Presint 8, 62250 Putrajaya, Wilayah Persekutuan Putrajaya" placeholder="location"  autofocus>
+                    <input type="text" class="form-control" name="location" value="{{ auth()->user()->location }}" placeholder="location"  autofocus>
                     <label for="floatingName">Location</label>
                     @if ($errors->has('location'))
                         <span class="text-danger text-left">{{ $errors->first('location') }}</span>
@@ -340,7 +349,7 @@
 
                 {{-- earningfreq --}}
                 <div class="col-md-4 form-floating">
-                    <input type="text" class="form-control" name="earningfreq" value="Monthly" placeholder="earningfreq"  autofocus>
+                    <input type="text" class="form-control" name="earningfreq" value="{{ auth()->user()->earningfreq }}" placeholder="earningfreq"  autofocus>
                     <label for="floatingName">Earning Frequency</label>
                     @if ($errors->has('earningfreq'))
                         <span class="text-danger text-left">{{ $errors->first('earningfreq') }}</span>
@@ -351,7 +360,7 @@
 
                 {{-- Contributing EPF --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="epf" value="{{ old('epf') }}" placeholder="epf"  autofocus>
+                    <input type="text" class="form-control" name="epf" value="{{ auth()->user()->epf }}" placeholder="epf"  autofocus>
                     <label for="floatingName">Contributing EPF</label>
                     @if ($errors->has('epf'))
                         <span class="text-danger text-left">{{ $errors->first('epf') }}</span>
@@ -360,7 +369,7 @@
                 
                 {{-- socso --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="socsocategory" value="{{ old('socsocategory') }}" placeholder="socsocategory"  autofocus>
+                    <input type="text" class="form-control" name="socsocategory" value="{{ auth()->user()->socsocategory }}" placeholder="socsocategory"  autofocus>
                     <label for="floatingName">SOCSO Category</label>
                     @if ($errors->has('socsocategory'))
                         <span class="text-danger text-left">{{ $errors->first('socsocategory') }}</span>
@@ -369,7 +378,7 @@
 
                 {{-- ssfwnumber --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="ssfwnumber" value="{{ old('ssfwnumber') }}" placeholder="ssfwnumber"  autofocus>
+                    <input type="text" class="form-control" name="ssfwnumber" value="{{ auth()->user()->ssfwnumber }}" placeholder="ssfwnumber"  autofocus>
                     <label for="floatingName">SSFW number</label>
                     @if ($errors->has('ssfwnumber'))
                         <span class="text-danger text-left">{{ $errors->first('ssfwnumber') }}</span>
@@ -378,7 +387,7 @@
 
                 {{-- pcbnumber --}}
                 <div class="col-md-6 form-floating">
-                    <input type="text" class="form-control" name="pcbnumber" value="{{ old('pcbnumber') }}" placeholder="pcbnumber"  autofocus>
+                    <input type="text" class="form-control" name="pcbnumber" value="{{ auth()->user()->pcbnumber }}" placeholder="pcbnumber"  autofocus>
                     <label for="floatingName">PCB Number</label>
                     @if ($errors->has('pcbnumber'))
                         <span class="text-danger text-left">{{ $errors->first('pcbnumber') }}</span>
