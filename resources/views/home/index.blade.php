@@ -2,28 +2,21 @@
 
 @section('content')
 
-<br><br>
-<div class="card mb-3">
-<img src="{{ URL('storage/Logo-OrenG.png') }}" class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title">Card title</h5>
-  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-  <h5 class="card-title">Card title</h5>
-  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-</div>
-<img src="..." class="card-img-top" alt="...">
-</div>
-
-
     <div class="bg-light p-5 rounded">
         @auth
         <p>Hi, {{auth()->user()->name}}</p>
+
+
+        <br><br>
+        <!-- <div class="card mb-3">
+        <img src="{{ URL('storage/Logo-OrenG.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        </div> -->
+
 
         <div class="card text-center">
   <div class="card-header">
@@ -37,7 +30,7 @@
   <div class="card-footer text-muted">
     2 days ago
   </div>
-</div>
+</div><br><br>
 
 
 <div class="row">
