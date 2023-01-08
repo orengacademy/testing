@@ -23,11 +23,13 @@
           <div class="col-md-6 form-floating">
             <div class="form-group">
           <label for="sel1">Client</label>
-          <select class="form-control" name="PMO" id="PMO">
+
+          <select class="form-control" name="client" id="PMO" value=''>
             @foreach($project as $item)
-            <option>{{ url($project->client) }}</option>
+            <option value="{{$item->id}}">{{$item->client}}</option>
+            @endforeach
           </select>
-          @endforeach
+
         </div>
         </div>
 
