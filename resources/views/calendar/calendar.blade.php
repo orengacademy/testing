@@ -1,3 +1,4 @@
+@extends('layouts.app-master')
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +13,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
 </head>
 <body>
-  
-<div class="container">
-    <br />
-    <h1 class="text-center text-primary"><u>How to Use Fullcalendar in Laravel 8</u></h1>
-    <br />
+@section('content')  
+<div class="container bg-light p-5 rounded">
+
+    <h1 class="h3 mb-3 fw-normal">Calendar Pages</h1>
 
     <div id="calendar"></div>
 
 </div>
+@endsection
    
 <script>
 
