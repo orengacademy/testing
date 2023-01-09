@@ -66,17 +66,18 @@
     <!-- <th style="width:20%;">Action</th> -->
   </tr>
   @foreach($project as $item)
-  <tr>
-    <td>{{ $item->Engineers }}</td>
-    <td>{{ $item->client }}</td>
-    <td>{{ $item->projectcode }}</td>
-    <td>{{ $item->PMO }}</td>
-    <td>{{ $item->startdate }}</td>
-    <td>{{ $item->enddate }}</td>
-    <td>{{ $item->status }}</td>
-
+    @if($item->status == "In Progress")
+    <tr>
+      <td>{{ $item->Engineers }}</td>
+      <td>{{ $item->client }}</td>
+      <td>{{ $item->projectcode }}</td>
+      <td>{{ $item->PMO }}</td>
+      <td>{{ $item->startdate }}</td>
+      <td>{{ $item->enddate }}</td>
+      <td>{{ $item->status }}</td>
+    </tr>
+    @endif
     @endforeach
-  </tr>
 </table>
 </div>
 @endauth
