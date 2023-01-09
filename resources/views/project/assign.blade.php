@@ -28,6 +28,28 @@
                   @endif
               </div>
 
+              <div class="col-md-6 form-floating">
+                  <input type="text" class="form-control" name="client" id="client" value="{{$project->projectcode}}" placeholder="Password" >
+                  <label for="floatingPassword">Project Code</label>
+                  @if ($errors->has('password'))
+                      <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                  @endif
+              </div>
+
+              <div class="col-md-6 form-floating">
+                <div class="form-group">
+              <label for="sel1">Project Manager (PMO)</label>
+              <select class="form-control" name="PMO" id="PMO">
+                <option>Intan Harnila</option>
+                <option>Fyka</option>
+                <option>Rafidah</option>
+                <option>Amira</option>
+                <option>Zarihan</option>
+                <option>Laili</option>
+              </select>
+            </div>
+            </div>
+
         <div class="col-md-6 form-floating">
           <div class="form-group">
         <label for="sel1">Status</label>
